@@ -21,7 +21,7 @@ import re
 from json import loads
 from pprint import pprint
 
-## Functions ##
+# Functions
 
 def str_to_int(string):
 	t = string.replace(',', '')
