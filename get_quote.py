@@ -21,61 +21,93 @@ import re
 from json import loads
 from pprint import pprint
 
+## Functions ##
+
 def str_to_int(string):
 	t = string.replace(',', '')
 	return int(t)
+
+def get_stock_price(ticker):
+	webpage = "https://finance.yahoo.com/quote/" + ticker + "?p=" + ticker	
+	soup = BeautifulSoup(requests.get(webpage).content, "html5lib")
+	script = soup.find("script", text = re.compile("root.App.main")).text
+	data = loads(re.search("root.App.main\s+=\s+(\{.*\})", script).group(1))
+	price = data["context"]["dispatcher"]["stores"]["QuoteSummaryStore"]["financialData"]["currentPrice"]["raw"]
+	
+	## Return stock price to caller
+	return price	
+
+def get_current_ratio(ticker):
+	webpage = "https://finance.yahoo.com/quote/" + ticker + "/balance-sheet?p=" + ticker	
+	soup = BeautifulSoup(requests.get(webpage).content, "html5lib")	
+	script = soup.find("script", text = re.compile("root.App.main")).text
+	data = loads(re.search("root.App.main\s+=\s+(\{.*\})", script).group(1))		
+	
+	## Balance sheet data
+	bs = data["context"]["dispatcher"]["stores"]["QuoteSummaryStore"]["balanceSheetHistoryQuarterly"]["balanceSheetStatements"]
+	
+	## Get total current assets and total current liabilities
+	tot_curr_assets = bs[0]['totalCurrentAssets']['raw']	
+	tot_curr_liabs = bs[0]['totalCurrentLiabilities']['raw']
+	
+	## Calculate the current ratio	
+	current_ratio = (tot_curr_assets * 1.0) / tot_curr_liabs
+	
+	## Return current ratio to caller	
+	return current_ratio
+
+def get_de_ratio(ticker):
+	webpage = "https://finance.yahoo.com/quote/" + ticker + "/balance-sheet?p=" + ticker	
+	soup = BeautifulSoup(requests.get(webpage).content, "html5lib")	
+	script = soup.find("script", text = re.compile("root.App.main")).text
+	data = loads(re.search("root.App.main\s+=\s+(\{.*\})", script).group(1))		
+	
+	## Balance sheet data
+	bs = data["context"]["dispatcher"]["stores"]["QuoteSummaryStore"]["balanceSheetHistoryQuarterly"]["balanceSheetStatements"]
+	
+	## Calculate total liabilites and total stockholder's equity
+	tot_liab = bs[0]['totalLiab']['raw']
+	sh_equity = bs[0]['totalStockholderEquity']['raw']
+	
+	## Calculate debt-to-equity ratio
+	de_ratio = (tot_liab * 1.0) / sh_equity
+	
+	## Return debt-to-equity ratio to caller
+	return de_ratio
+
+def print_summary(ticker):
+	
+	## Fetch stock price, current ratio, and debt-to-equity ratio	
+	price = get_stock_price(ticker)	
+	curr = get_current_ratio(ticker)
+	de = get_de_ratio(ticker)	
+	
+	print("\n\n")
+	print(40*"-" + " |" + colored(ticker, attrs = ['bold']) + "| " + 40*"-" + "\n")
+	print("Current Price: " + colored(price, 'green', attrs=['bold']))
+	print("\n")
+
+	print(colored("Debt Metrics", attrs = ['bold']))
+	
+	if (de < 1.00):
+		print("Debt-to-equity Ratio: " + colored("%.2f" % de, 'green', attrs = ['bold']))
+	else:
+		print("Debt-to-equity Ratio: " + colored("%.2f" % de, 'red', attrs = ['bold']))	
+
+	if (curr > 1.00):
+		print("Current Ratio: " + colored("%.2f" % curr, 'green', attrs = ['bold']))
+	else:
+		print("Current Ratio: " + colored("%.2f" % curr, 'red', attrs = ['bold']))
+
+	print("\n\n")		
+
 
 ## Check for proper usage of script
 if len(sys.argv) > 2:
 	print("Please supply only the ticker symbol.  Example usage: ./get_quote NVDA")
 	exit()
-
-## Build URL for requested stock's page on Yahoo Finance
-webpage = "https://finance.yahoo.com/quote/" + sys.argv[1] + "?p=" + sys.argv[1]
-
-## Get JSON data from webpage
-soup = BeautifulSoup(requests.get(webpage).content, "html5lib")
-script = soup.find("script",text=re.compile("root.App.main")).text
-data = loads(re.search("root.App.main\s+=\s+(\{.*\})", script).group(1))
-
-quote = data["context"]["dispatcher"]["stores"]["QuoteSummaryStore"]["financialData"]["currentPrice"]["raw"]
-
-## Get company health metrics
-bs_page = "https://finance.yahoo.com/quote/" + sys.argv[1] + "/balance-sheet?p=" + sys.argv[1]
-soup = BeautifulSoup(requests.get(bs_page).content, "html5lib")
-script = soup.find("script", text = re.compile("root.App.main")).text
-bs_data = loads(re.search("root.App.main\s+=\s+(\{.*\})", script).group(1))
-
-bs = bs_data["context"]["dispatcher"]["stores"]["QuoteSummaryStore"]["balanceSheetHistoryQuarterly"]["balanceSheetStatements"]
-
-## Calculate the company's current ratio (measure of ability to handle short-term debt)
-tot_curr_assets = str_to_int(bs[0]['totalCurrentAssets']['longFmt'])
-tot_curr_liabs = str_to_int(bs[0]['totalCurrentLiabilities']['longFmt'])
-
-current_ratio = (tot_curr_assets * 1.0) / tot_curr_liabs
-
-## Calculate the company's debt-to-equity ratio (how much leverage is the company using?)
-tot_liab = bs[0]['totalLiab']['raw']  # total liabilities (mrq)
-equity = bs[0]['totalStockholderEquity']['raw']
-
-de_ratio = (tot_liab * 1.0) / equity
-
-
-print("\n\n")
-print(40*"-" + " |" + colored(sys.argv[1], attrs = ['bold']) + "| " + 40*"-" + "\n")
-print("Current Price: " + colored(quote, 'green', attrs=['bold']))
-print("\n")
-
-print(colored("Debt Metrics", attrs = ['bold']))
-
-if (de_ratio < 1.00):
-	print("Debt-to-equity Ratio: " + colored("%.2f" % de_ratio, 'green', attrs = ['bold']))
+elif len(sys.argv) < 2:
+	print("Please supply a ticker symbol.")
+	exit()
 else:
-	print("Debt-to-equity Ratio: " + colored("%.2f" % de_ratio, 'red', attrs = ['bold']))	
-
-if current_ratio > 1.00:
-	print("Current Ratio: " + colored("%.2f" % current_ratio, 'green', attrs = ['bold']))
-else:
-	print("Current Ratio: " + colored("%.2f" % current_ratio, 'red', attrs = ['bold']))
-
-print("\n\n")
+	print_summary(sys.argv[1])
