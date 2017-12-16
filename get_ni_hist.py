@@ -4,6 +4,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+import pandas as pd
+import sys
+from pprint import pprint
 
 '''FUNCTIONS'''
 ## Get the sample mean of a set of data
@@ -80,7 +83,7 @@ def get_corr_coeff(x, y):
 	return r
 		
 ## Plot linear regression line for data
-def plot_lin_reg(x, y, ax, n_pred):
+def plot_lin_reg(x, y, ax, n_pred, x_for_pred):
 	
 	# Calculate slope of regression line
 	r = get_corr_coeff(x, y)	
@@ -99,48 +102,67 @@ def plot_lin_reg(x, y, ax, n_pred):
 	Y = y_intercept + slope * X
 	ax.plot(X, Y, color = 'black', linestyle = 'solid')
 
+	# Return list of predictions
+	return list(y_intercept + slope * d for d in x_for_pred)
+
 '''DATA'''
-## SKYWORKS SOLUTIONS, INC. annual net income data (in millions) 
-swks_ani_raw = {2016 : 1010,
-		2015 : 995,
-		2014 : 798,
-		2013 : 458,
-		2012 : 278,
-		2011 : 202,
-		2010 : 227,
-		2009 : 137,
-		2008 : 95,
-		2007 : 111,
-		2006 : 40,
-		2005 : -105,
-		2004 : 26,
-		2003 : 22,
-		2002 : -451,
-		2001 : -236,
-		2000 : -319,
-		1999 : -66,
-		1998 : 10,
-		1997 : -16,
-		1996 : 4,
-		1995 : 3,
-		1994 : -11,
-		1993 : -3,
-		1992 : 0.1,
-		1991 : 2}
+## Get path to csv file containing net income data and read file into dataframe
+csv_file = sys.argv[2]
+ni_df = pd.read_csv(csv_file).sort_values('year')
 
-## List of years we have income date for (ascending)
-years = list(reversed(list(key for key in swks_ani_raw)))
-
-## List of net incomes (earliest to latest)
-net_incomes = list(reversed(list(swks_ani_raw[key] for key in swks_ani_raw)))
+years = list(ni_df["year"])
+net_incomes = list(ni_df["net_income"])
 
 
 '''DATA VISUALIZATION'''
 ## Create a figure and set of axes for plotting data
-FIG_WIDTH = 10
+FIG_WIDTH = 12
 FIG_HEIGHT = 6
 fig, ax = plt.subplots(figsize = (FIG_WIDTH, FIG_HEIGHT))
 
-plot_lin_reg(years, net_incomes, ax, 10)
+## Create bar plot of net income data
+bars = ax.bar(years, net_incomes, color = 'green')
 
+## Create bar plot for the predicted net incomes
+extended_years = range(max(years) + 1, max(years) + 11)
+pred_net_incomes = plot_lin_reg(years, net_incomes, ax, 10, extended_years)
+extended_bars = ax.bar(extended_years, pred_net_incomes, color = 'gray') 
+
+## Add net income amounts above bars in bar graph
+for bar, ni in zip(bars + extended_bars, net_incomes + pred_net_incomes):
+	bh = bar.get_height()
+	if (bh < 0):
+		bar.set_color('salmon') # Make bars corresponding to negative net incomes red
+		text_height = bh - 80
+	else:
+		text_height = bh + 40
+
+	ax.text(bar.get_x() + bar.get_width() / 2, text_height, '%d' % ni, ha = 'center', va = 'bottom',
+		fontweight = 'bold', color = 'black', fontsize = 6)
+
+## Add text to describe predicted net income growth
+ax.text(extended_bars[0].get_x() + extended_bars[0].get_width() / 2, -150,
+	'%.2f %% growth' % (100 * ((extended_bars[1].get_height() - extended_bars[0].get_height()) / extended_bars[0].get_height())),
+	fontweight = 'bold', fontsize = 14)
+
+## Add labels and title to plot
+title = sys.argv[1] + " Annual Net Income " + "(%d - " % min(years) + "%d)" % max(years) 
+ax.set_title(title)
+ax.set_xlabel('Year')
+ax.set_ylabel('Net Income (in millions)')
+
+## Set the background color for the plot
+ax.set_facecolor('wheat')
+
+## Adjust y range of plot
+ax.set_ylim(min(net_incomes) - 200, max(net_incomes) + 200)
+
+## Make x-axis visible on plot
+ax.axhline(0, color = 'black')
+
+## Angle years on x-axis, and only include every other year
+plt.xticks(np.arange(min(years), max(extended_years) + 1, 2.0))
+fig.autofmt_xdate()
+
+## Display the plot
 plt.show()
