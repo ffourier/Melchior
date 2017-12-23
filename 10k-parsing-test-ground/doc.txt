@@ -1,0 +1,1272 @@
+
+
+[x]ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+ For the fiscal year ended January 29, 2017
+
+
+[_]TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+
+
+Delaware94-3177549
+(State or other jurisdiction of(I.R.S. Employer
+Incorporation or Organization)Identification No.)
+
+
+Title of each className of each exchange on which registered
+Common Stock, $0.001 par value per shareThe NASDAQ Global Select Market
+
+
+Large accelerated filer   x              Accelerated filer o                        
+Non-accelerated filer o (Do not check if a smaller reporting company)       Smaller reporting company o
+
+
+  Page
+  PART I 
+ Item 1. Business 4
+ Item 1A. Risk Factors 14
+ Item 1B. Unresolved Staff Comments 23
+ Item 2. Properties 23
+ Item 3. Legal Proceedings 23
+ Item 4.Mine Safety Disclosures 23
+  PART II 
+ Item 5. Market for Registrant’s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities 24
+ Item 6. Selected Financial Data27
+ Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations 28
+ Item 7A. Quantitative and Qualitative Disclosures About Market Risk 41
+ Item 8. Financial Statements and Supplementary Data 42
+ Item 9. Changes in and Disagreements With Accountants on Accounting and Financial Disclosure 42
+ Item 9A. Controls and Procedures 43
+ Item 9B. Other Information 43
+  PART III 
+ Item 10. Directors, Executive Officers and Corporate Governance 44
+ Item 11. Executive Compensation 44
+ Item 12. Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters45
+ Item 13. Certain Relationships and Related Transactions, and Director Independence45
+ Item 14. Principal Accounting Fees and Services 45
+  PART IV 
+ Item 15. Exhibits, Financial Statement Schedules 46
+ Signatures  97
+
+
+Businesses  NVIDIA Visual Computing and Accelerated Computing Platforms and Brands
+    
+GPU ∙GeForce for PC gaming
+  ∙GeForce NOW for cloud-based game-streaming service
+  ∙Quadro for design professionals working in computer-aided design, video editing, special effects and other creative applications
+  ∙Tesla for AI utilizing deep learning and accelerated computing, leveraging the parallel computing capabilities of GPUs for general purpose computing
+  ∙GRID to provide the power of NVIDIA graphics through the cloud and datacenters
+    
+Tegra Processor ∙Tegra processors are primarily designed to enable branded platforms - DRIVE PX and SHIELD 
+  ∙DRIVE PX automotive supercomputers that provide self-driving capabilities
+  ∙SHIELD includes a family of devices and services designed to harness the power of mobile-cloud to revolutionize home entertainment, AI and gaming
+
+•Design and Manufacturing - including computer-aided design, architectural design, consumer-products manufacturing, medical instrumentation and aerospace
+
+•Digital Content Creation - including professional video editing and post production, special effects for films and broadcast-television graphics
+
+•suppliers of or licensors of discrete and integrated GPUs and accelerated computing processing solutions, including chipsets that incorporate 3D graphics functionality as part of their existing solutions, such as Advanced Micro Devices, or AMD, ARM Holdings plc, Imagination Technologies Group plc, Intel Corporation, or Intel, and Xilinx, Inc.; and
+
+•suppliers of SOC products that are embedded into automobiles and smart devices such as televisions, monitors, set-top boxes, and gaming devices, such as Ambarella, Inc., AMD, Apple, Inc., Broadcom Ltd., Intel, Mobileye N.V., Qualcomm Incorporated, Renesas Electronics Corporation, Samsung, and Texas Instruments Incorporated. 
+
+
+Name Age Position
+Jen-Hsun Huang 54 President, Chief Executive Officer and Director
+Colette M. Kress 49 Executive Vice President and Chief Financial Officer
+Ajay K. Puri 62 Executive Vice President, Worldwide Field Operations
+Debora Shoquist 62 Executive Vice President, Operations
+Timothy S. Teter 50 Senior Vice President, General Counsel and Secretary
+
+•a lack of guaranteed supply of wafers and other components and potential higher wafer and component prices due to supply constraints;
+
+•a failure by our foundries to procure raw materials or to provide or allocate adequate manufacturing or test capacity for our products;
+
+•a failure to develop, obtain or successfully implement high quality, leading-edge process technologies, including transitions to smaller geometry process technologies such as 16nm FinFET, and memory designs such as CoWoS, needed to manufacture our products profitably or on a timely basis;
+
+•loss of a supplier and additional expense and/or production delays as a result of qualifying a new foundry or subcontractor and commencing volume production or testing in the event of a loss of or a decision to add or change a supplier;
+
+•a lack of direct control over delivery schedules or product quantity and quality; and
+
+•delays in product shipments, shortages, a decrease in product quality and/or higher expenses in the event our subcontractors or foundries prioritize our competitors’ orders over our orders or otherwise.
+
+•incorporate those features and functionalities into products that meet the exacting design requirements of our customers; and
+
+•most of our sales are made on a purchase order basis, which permits our customers to cancel, change or delay product purchase commitments with little or no notice to us and without penalty;
+
+•our partners may develop their own solutions;
+
+•our customers may purchase products from our competitors; or
+
+•our partners may discontinue sales or lose market share in the markets for which they purchase our products.
+
+•international economic and political conditions, such as political tensions between countries in which we do business;
+
+•unexpected changes in, or impositions of, legislative or regulatory requirements;  
+
+•differing legal standards with respect to protection of intellectual property and employment practices;
+
+•local business and cultural factors that differ from our normal standards and practices, including business practices that we are prohibited from engaging in by the Foreign Corrupt Practices Act and other anticorruption laws and regulations;
+
+•exporting or importing issues related to export or import restrictions, tariffs, quotas and other trade barriers and restrictions; 
+
+•financial risks such as longer payment cycles, difficulty in collecting accounts receivable and foreign exchange rate fluctuations; and
+
+•increased costs due to imposition of climate change regulations, such as carbon taxes, fuel or energy taxes, and pollution limits.
+
+•difficulty in combining the technology, products, operations or workforce of the acquired business with our business;
+
+•diversion of capital and other resources, including management's attention;
+
+•assumption of liabilities;
+
+•incurring amortization expenses, impairment charges to goodwill or write-downs of acquired assets;
+
+•potential failure of our due diligence processes to identify significant issues with product quality, architecture and development, or legal and financial contingencies, among other things; and
+
+•impairment of relationships with, or loss of our or our target’s, employees, vendors and customers, as a result of our acquisition or investment.
+
+•demand and market acceptance for our products and services and/or our customers’ products;
+
+•the successful development and volume production of our next-generation products;
+
+•our inability to adjust spending to offset revenue shortfalls due to the multi-year development cycle for some of our products and services;
+
+•new product and service announcements or product and service introductions by our competitors;
+
+•our introduction of new products in accordance with OEMs’ design requirements and design cycles;
+
+•changes in the timing of product orders due to unexpected delays in the introduction of our customers’ products;
+
+•the level of growth or decline of the PC industry in general; 
+
+•seasonal fluctuations associated with the PC and consumer products market;
+
+•contraction in automotive and consumer end-market demand due to adverse regional or worldwide economic conditions;
+
+•slower than expected growth of demand for new technologies;
+
+•fluctuations in the availability of manufacturing capacity or manufacturing yields; 
+
+•our ability to reduce the manufacturing costs of our products;
+
+•competitive pressures resulting in lower than expected average selling prices;
+
+•product rates of return in excess of that forecasted or expected due to quality issues;
+
+•rescheduling or cancellation of customer orders;
+
+•the loss of a significant customer;
+
+•substantial disruption in the operations of our foundries or other third-party subcontractors, as a result of a natural disaster, equipment failure, terrorism or other causes;
+
+•supply constraints for and changes in the cost of the other components incorporated into our customers’ products, including memory devices;
+
+•costs associated with the repair and replacement of defective products;
+
+•unexpected inventory write-downs or write-offs;
+
+•legal and other costs related to defending intellectual property and other types of lawsuits;
+
+•availability of software and technology licenses at commercially reasonable terms for the continued sale or development of new products;
+
+•customer bad debt write-offs;
+
+•changes in our effective tax rate as a result of changes in the mix of earnings in countries with differing statutory tax rates, applicable tax laws or interpretations of tax laws; 
+
+•any unanticipated costs associated with environmental liabilities;
+
+•unexpected costs related to our ownership of real property;
+
+•costs to comply with new government regulations and regulatory enforcement actions;
+
+•costs to maintain effective internal control over financial reporting; 
+
+•changes in financial accounting standards or interpretations of existing standards; and
+
+•general macroeconomic events and factors affecting the overall semiconductor industry and our target markets.
+
+
+ High Low
+Fiscal year ending January 28, 2018   
+First Quarter (through February 24, 2017)$120.92 $95.70
+Fiscal year ended January 29, 2017   
+Fourth Quarter$119.93 $66.58
+Third Quarter$72.95 $55.50
+Second Quarter$57.25 $34.40
+First Quarter$37.46 $24.75
+Fiscal year ended January 31, 2016   
+Fourth Quarter$33.94 $26.45
+Third Quarter$28.78 $19.09
+Second Quarter$22.88 $19.16
+First Quarter$23.61 $18.94
+
+
+Period Total Number of Shares Purchased (In millions) Average Price Paid per Share Total Number of Shares Purchased as Part of Publicly Announced Plans or Programs (In millions) Approximate Dollar Value of Shares that May Yet Be Purchased Under the Plans or Programs (In billions)
+October 31, 2016 - November 27, 2016 2.5 $93.17 2.5 $2.73
+November 28, 2016 - December 25, 2016 — $— — $2.73
+December 26, 2016 - January 29, 2017 — $— — $2.73
+Total 2.5   2.5  
+
+
+ 1/29/2012 1/27/2013 1/26/2014 1/25/2015 1/31/2016 1/29/2017
+NVIDIA Corporation$100.00 $83.78 $107.33 $145.42 $209.05 $805.35
+S&P 500$100.00 $116.77 $142.07 $166.19 $160.54 $194.04
+S&P Semiconductors$100.00 $91.30 $116.65 $161.31 $149.44 $218.88
+NASDAQ 100$100.00 $112.60 $147.83 $180.81 $183.09 $223.98
+
+
+ Year Ended
+ January 29,2017 (A) January 31,2016 (A) January 25, 2015 January 26, 2014 January 27,2013
+ (In millions, except per share data)
+Consolidated Statement of Income Data:         
+Revenue$6,910 $5,010 $4,682 $4,130 $4,280
+Income from operations$1,934 $747 $759 $496 $648
+Net income$1,666 $614 $631 $440 $563
+Net income per share:         
+Basic$3.08 $1.13 $1.14 $0.75 $0.91
+Diluted$2.57 $1.08 $1.12 $0.74 $0.90
+Weighted average shares used in per share computation:         
+Basic541 543 552 588 619
+Diluted649 569 563 595 625
+
+
+ Year Ended
+ January 29, 2017 (B,C) January 31,2016 (B) January 25,2015 January 26,2014 (B) January 27,2013
+ (In millions, except per share data)
+Consolidated Balance Sheet Data:         
+Cash, cash equivalents and marketable securities$6,798 $5,037 $4,623 $4,672 $3,728
+Total assets$9,841 $7,370 $7,201 $7,251 $6,412
+Debt obligations$2,779 $1,413 $1,384 $1,356 $—
+Capital lease obligations, less current portion$6 $10 $14 $18 $19
+Convertible debt conversion obligation$31 $87 $— $— $—
+Total shareholders’ equity$5,762 $4,469 $4,418 $4,456 $4,828
+Cash dividends declared and paid per common share (D)$0.485 $0.395 $0.340 $0.310 $0.075
+
+(A)In fiscal year 2016, we began the wind down of our Icera modem operations. As a result, our income from operations for fiscal years 2017 and 2016 included $3 million and $131 million, respectively, of restructuring and other charges. 
+
+(B)In fiscal year 2014, we issued 1.00% Convertible Senior Notes due 2018 in the aggregate principal amount of $1.50 billion. The Convertible Notes first became convertible as of February 1, 2016. As of January 29, 2017, $827 million of the Convertible Notes remained outstanding, of which $796 million carrying value is classified as a current liability and $31 million is classified as convertible debt conversion obligation in the mezzanine equity section of our Consolidated Balance Sheet. Please refer to Note 11 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K for additional information.
+
+(C)In fiscal year 2017, we issued $1.00 billion of the Notes Due 2021, and $1.00 billion of the Notes Due 2026. Interest on the Notes is payable on March 16 and September 16 of each year, beginning on March 16, 2017. Upon 30 days' notice to holders of the Notes, we may redeem the Notes for cash prior to maturity, at redemption prices that include accrued and unpaid interest, if any, and a make-whole premium. However, no make-whole premium will be paid for redemptions of the Notes Due 2021 on or after August 16, 2021, or for redemptions of the Notes Due 2026 on or after June 16, 2026.
+
+(D)On November 8, 2012, we initiated a quarterly dividend payment of $0.075 per share, or $0.30 per share on an annual basis. On November 7, 2013, we increased the quarterly cash dividend to $0.085 per share, or $0.34 per share on an annual basis. On May 7, 2015, we increased the quarterly cash dividend to $0.0975 per share, or $0.39 per share on an annual basis. On November 5, 2015, we increased the quarterly cash dividend to $0.115 per share, or $0.46 per share on an annual basis. On November 10, 2016, we increased the quarterly cash dividend to $0.14 per share, or $0.56 per share on an annual basis.
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 Change
+ ($ in millions, except per share data)
+Revenue$6,910 $5,010 38%
+Gross margin58.8% 56.1% 270 bps
+Operating expenses$2,129 $2,064 3%
+Income from operations$1,934 $747 159%
+Net income$1,666 $614 171%
+Net income per diluted share$2.57 $1.08 138%
+
+
+  Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Revenue100.0 % 100.0 % 100.0 %
+Cost of revenue41.2 43.9 44.5
+Gross profit58.8 56.1 55.5
+Operating expenses:     
+Research and development21.2 26.6 29.0
+Sales, general and administrative9.6 12.0 10.3
+Restructuring and other charges— 2.6 —
+Total operating expenses30.8 41.2 39.3
+Income from operations28.0 14.9 16.2
+Interest income0.8 0.8 0.6
+Interest expense(0.8) (0.9) (1.0)
+Other income (expense), net(0.4) 0.1 0.3
+Income before income taxes27.6 14.9 16.1
+Income tax expense3.5 2.6 2.6
+Net income24.1 % 12.3 % 13.5 %
+
+
+ Year Ended Year Ended
+ January 29, 2017 January 31, 2016 $Change %Change January 31, 2016 January 25, 2015 $Change %Change
+ ($ in millions) ($ in millions)
+GPU$5,822 $4,187 $1,635 39% $4,187 $3,839 $348 9 %
+Tegra Processor824 559 265 47% 559 579 (20) (3)%
+All Other264 264 — —% 264 264 — — %
+Total$6,910 $5,010 $1,900 38% $5,010 $4,682 $328 7 %
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Revenue:     
+Customer A12% 11% 11%
+
+
+ Year Ended Year Ended
+ January 29, 2017 January 31, 2016 $Change %Change January 31,2016 January 25, 2015 $Change %Change
+ ($ in millions) ($ in millions)
+Research and development expenses$1,463 $1,331 $132 10 % $1,331 $1,360 $(29) (2)%
+Sales, general and administrative expenses663 602 61 10 % 602 480 122 25 %
+Restructuring and other charges3 131 (128) (98)% 131 — 131 100 %
+Total operating expenses$2,129 $2,064 $65 3 % $2,064 $1,840 $224 12 %
+Research and development as a percentage of net revenue21.2% 26.6%     26.6% 29.0%    
+Sales, general and administrative as a percentage of net revenue9.6% 12.0%     12.0% 10.3%    
+Restructuring and other charges as a percentage of net revenue—% 2.6%     2.6% —%    
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+Cash and cash equivalents$1,766 $596
+Marketable securities5,032 4,441
+Cash, cash equivalents, and marketable securities$6,798 $5,037
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (In millions)
+Net cash provided by operating activities$1,672 $1,175 $906
+Net cash used in investing activities$(793) $(400) $(727)
+Net cash provided by (used in) financing activities$291 $(676) $(834)
+
+
+ Payment Due By Period
+Contractual ObligationsTotal Less than1 Year 1-3 Years 4-5 Years More than5 Years All Other
+ (In millions)  
+1.00% Convertible Notes (1)$831 $831 $— $— $— $—
+Long-term debt (2) 2,430 54 162 1,086 1,128 —
+Inventory purchase obligations1,001 1,001 — — — —
+Operating leases (3)140 42 56 29 13 —
+Uncertain tax positions, interest and penalties (4)96 — — — — 96
+Capital purchase obligations38 38 — — — —
+Capital lease11 5 6 — — —
+Restructuring related obligation (5)13 13 — — — —
+Total contractual obligations $4,560 $1,984 $224 $1,115 $1,141 $96
+
+(1)Represents the aggregate principal amount of $827 million and anticipated interest payments of $4 million for the Convertible Notes. See Note 11 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K.
+
+(2)Represents the aggregate principal amount of $2.00 billion and anticipated interest payments of $430 million for the Notes. See Note 11 of the Notes to the Consolidated Financial Statements in Part IV, Item 15 of this Annual Report on Form 10-K.
+
+(3)Excludes operating lease payments that we expect to make under an operating lease financing arrangement following construction of a new headquarters building in Santa Clara, California, which is currently targeted for completion in the fourth quarter of fiscal year 2018. The amount of the operating lease payments will be determined after the completion of construction. See the section below titled “Off-Balance Sheet Arrangements” for additional information.
+
+(4)Represents unrecognized tax benefits of $96 million which consists of $83 million and the related interest and penalties of $13 million recorded in non-current income tax payable as of January 29, 2017. We are unable to reasonably estimate the timing of any potential tax liability or interest/penalty payments in individual years due to uncertainties in the underlying income tax positions and the timing of the effective settlement of such tax positions.
+
+(5)Our operating expenses for the fiscal year 2017 included $3 million of restructuring and other charges related to the wind-down of our Icera modem operations. The $13 million represents the remaining balance of the restructuring liability as of January 29, 2017.
+
+
+    Page
+(a)1. Consolidated Financial Statements 
+     
+   Report of Independent Registered Public Accounting Firm47
+     
+   Consolidated Statements of Income for the years ended January 29, 2017, January 31, 2016, and January 25, 201548
+     
+   Consolidated Statements of Comprehensive Income for the years ended January 29, 2017, January 31, 2016, and January 25, 201549
+     
+   Consolidated Balance Sheets as of January 29, 2017 and January 31, 201650
+     
+   Consolidated Statements of Shareholders’ Equity for the years ended January 29, 2017, January 31, 2016, and January 25, 201551
+     
+   Consolidated Statements of Cash Flows for the years ended January 29, 2017, January 31, 2016, and January 25, 2015 52
+     
+   Notes to the Consolidated Financial Statements54
+     
+ 2. Financial Statement Schedule 
+     
+   Schedule II Valuation and Qualifying Accounts93
+     
+ 3. Exhibits 
+     
+   The exhibits listed in the accompanying index to exhibits are filed or incorporated by reference as a part of this Annual Report on Form 10-K.94
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Revenue$6,910 $5,010 $4,682
+Cost of revenue2,847 2,199 2,083
+Gross profit4,063 2,811 2,599
+Operating expenses:     
+Research and development1,463 1,331 1,360
+Sales, general and administrative663 602 480
+Restructuring and other charges3 131 —
+Total operating expenses2,129 2,064 1,840
+Income from operations1,934 747 759
+Interest income54 39 28
+Interest expense(58) (47) (46)
+Other income (expense), net(25) 4 14
+Income before income tax expense1,905 743 755
+Income tax expense239 129 124
+Net income$1,666 $614 $631
+      
+Net income per share:     
+Basic$3.08 $1.13 $1.14
+Diluted$2.57 $1.08 $1.12
+      
+Weighted average shares used in per share computation:     
+Basic541 543 552
+Diluted649 569 563
+      
+Cash dividends declared and paid per common share$0.485 $0.395 $0.340
+
+
+  Year Ended
+  January 29, 2017 January 31, 2016 January 25, 2015
+Net income $1,666 $614 $631
+Other comprehensive income (loss), net of tax:      
+Available-for-sale securities:      
+Net unrealized gain (loss) (17) (6) 3
+Reclassification adjustments for net realized gain (loss) included in net income 1 (2) —
+Net change in unrealized gain (loss) (16) (8) 3
+Cash flow hedges:      
+Net unrealized gain (loss) 2 (4) —
+Reclassification adjustments for net realized gain included in net income 2 — —
+Net change in unrealized gain (loss) 4 (4) —
+Other comprehensive income (loss), net of tax (12) (12) 3
+Total comprehensive income $1,654 $602 $634
+
+
+ January 29, 2017 January 31, 2016
+ASSETS   
+Current assets:   
+Cash and cash equivalents$1,766 $596
+Marketable securities5,032 4,441
+Accounts receivable, less allowances of $13 as of January 29, 2017 and $11 as of January 31, 2016826 505
+Inventories794 418
+Prepaid expenses and other current assets118 93
+Total current assets8,536 6,053
+Property and equipment, net521 466
+Goodwill618 618
+Intangible assets, net104 166
+Other assets62 67
+Total assets$9,841 $7,370
+    
+LIABILITIES, CONVERTIBLE DEBT CONVERSION OBLIGATION AND SHAREHOLDERS' EQUITY
+Current liabilities:   
+Accounts payable$485 $296
+Accrued and other current liabilities507 642
+Convertible short-term debt796 1,413
+Total current liabilities1,788 2,351
+Long-term debt1,983 —
+Other long-term liabilities271 453
+Capital lease obligations, long-term6 10
+ Total liabilities4,048 2,814
+Commitments and contingencies - see Note 12 
+Convertible debt conversion obligation31 87
+Shareholders’ equity:   
+Preferred stock, $.001 par value; 2 shares authorized; none issued— —
+Common stock, $.001 par value; 2,000 shares authorized; 868 shares issued and 585 outstanding as of January 29, 2017; 780 shares issued and 539 outstanding as of January 31, 20161 1
+Additional paid-in capital4,708 4,170
+Treasury stock, at cost (283 shares in 2017 and 242 shares in 2016)(5,039) (4,048)
+Accumulated other comprehensive loss(16) (4)
+Retained earnings6,108 4,350
+Total shareholders' equity5,762 4,469
+Total liabilities, convertible debt conversion obligation and shareholders' equity$9,841 $7,370
+
+
+ Common  StockOutstanding Additional Treasury Accumulated Other Comprehensive Retained Total Shareholders'
+ Shares Amount  Paid-in Capital  Stock  Income (Loss)  Earnings  Equity
+Balances, January 26, 2014568 $1 $3,483 $(2,538) $5 $3,504 $4,455
+Other comprehensive income— — — — 3 — 3
+Net income— — — — — 631 631
+Issuance of common stock from stock plans 24 — 197 — — — 197
+Tax withholding related to vesting of restricted stock units(3) — — (43) — — (43)
+Share repurchase(44) — — (814)   — (814)
+Cash dividends declared and paid ($0.340 per common share)— — — — — (186) (186)
+Tax benefit from stock-based compensation  — — 17 — — — 17
+Stock-based compensation— — 158 — — — 158
+Balances, January 25, 2015545 1 3,855 (3,395) 8 3,949 4,418
+Other comprehensive loss— — — — (12) — (12)
+Net income— — — — — 614 614
+Issuance of common stock from stock plans 22 — 186 — — — 186
+Tax withholding related to vesting of restricted stock units(3) — — (66) — — (66)
+Share repurchase(25) — — (587) — — (587)
+Cash dividends declared and paid ($0.395 per common share)— — — — — (213) (213)
+Tax benefit from stock-based compensation  — — 10 — — — 10
+Stock-based compensation— — 206 — — — 206
+Reclassification of convertible debt conversion obligation— — (87) — — — (87)
+Balances, January 31, 2016539 1 4,170 (4,048) (4) 4,350 4,469
+Retained earnings adjustment due to adoption of an accounting standard related to stock-based compensation— — — — — 353 353
+Other comprehensive loss— — — — (12) — (12)
+Net income— — — — — 1,666 1,666
+Issuance of common stock in exchange for warrants44 — (1) — — — (1)
+Convertible debt conversion23 — (6) — — — (6)
+Issuance of common stock from stock plans 20 — 167 — — — 167
+Tax withholding related to vesting of restricted stock units(3) — — (177) — — (177)
+Share repurchase(15) — — (739) — — (739)
+Exercise of convertible note hedges(23) — 75 (75) — — —
+Cash dividends declared and paid ($0.485 per common share)— — — — — (261) (261)
+Stock-based compensation— — 248 — — — 248
+Reclassification of convertible debt conversion obligation— — 55 — — — 55
+Balances, January 29, 2017585 $1 $4,708 $(5,039) $(16) $6,108 $5,762
+
+
+   Year Ended  
+ January 29, 2017 January 31, 2016 January 25, 2015
+Cash flows from operating activities:     
+Net income$1,666 $614 $631
+Adjustments to reconcile net income to net cash provided by operating activities:     
+Depreciation and amortization187 197 220
+Stock-based compensation expense247 204 158
+Restructuring and other charges— 45 —
+Amortization of debt discount25 29 28
+Net gain on sale and disposal of long-lived assets and investments(3) (6) (17)
+Loss on early debt conversions21 — —
+Deferred income taxes197 134 83
+Tax benefit from stock-based compensation— (10) (18)
+Other11 19 24
+Changes in operating assets and liabilities, net of effects of acquisitions:     
+Accounts receivable(321) (32) (49)
+Inventories(375) 66 (95)
+Prepaid expenses and other assets(18) (16) 4
+Accounts payable184 (11) (27)
+Accrued and other current liabilities(135) 39 5
+Other long-term liabilities(14) (97) (41)
+Net cash provided by operating activities1,672 1,175 906
+Cash flows from investing activities:     
+Proceeds from sales of marketable securities1,546 2,102 1,372
+Proceeds from maturities of marketable securities969 1,036 865
+Proceeds from sale of long-lived assets and investments7 7 21
+Purchases of marketable securities(3,134) (3,477) (2,862)
+Purchases of property and equipment and intangible assets(176) (86) (122)
+Reimbursement of headquarters building development costs from banks— 24 —
+Other(5) (6) (1)
+Net cash used in investing activities(793) (400) (727)
+Cash flows from financing activities:     
+Proceeds from issuance of notes, net 1,988 — —
+Payments related to repurchases of common stock(739) (587) (814)
+Repayment of convertible notes(673) — —
+Dividends paid(261) (213) (186)
+Net proceeds (payments) related to employee stock plans(9) 120 154
+Payments for debt issuance costs(8) — —
+Tax benefit from stock-based compensation— 10 18
+Other(7) (6) (6)
+Net cash provided by (used in) financing activities291 (676) (834)
+Change in cash and cash equivalents1,170 99 (655)
+Cash and cash equivalents at beginning of period596 497 1,152
+Cash and cash equivalents at end of period$1,766 $596 $497
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Supplemental disclosures of cash flow information:     
+Cash paid for income taxes, net$14 $14 $14
+Cash paid for interest$13 $17 $17
+      
+Non-cash investing and financing activities:     
+Assets acquired by assuming related liabilities$16 $19 $10
+Goodwill adjustment related to previously acquired business$— $— $(25)
+
+•We recorded an excess tax benefit from stock-based compensation within income tax expense, rather than in APIC, of $82 million for fiscal year 2017.
+
+•We recorded a cumulative-effect adjustment as of February 1, 2016 to increase retained earnings by $353 million, with a corresponding increase to deferred tax assets, to recognize the federal net operating loss and federal research tax credit carryforwards attributable to excess tax benefits on stock-based compensation that had not been previously recognized in APIC. We also recorded deferred tax assets of $63 million with a corresponding full valuation allowance related to state net operating loss and state research credit carryforwards.
+
+•The excess tax benefit from stock-based compensation is now included in net operating cash rather than net financing cash in our Consolidated Statements of Cash Flows. We elected to apply this change in presentation prospectively and thus prior periods have not been adjusted.
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (In millions)
+Cost of revenue$15 $15 $12
+Research and development134 115 88
+Sales, general and administrative98 74 58
+Total$247 $204 $158
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (In millions, except per share data)
+RSUs, PSUs and Market-based PSUs     
+Awards granted12 13 13
+Estimated total grant-date fair value$591 $296 $228
+Weighted average grant-date fair value (per share)$50.57 $22.01 $17.68
+      
+ESPP     
+Shares purchased4 6 7
+Weighted average price (per share)$18.51 $13.67 $10.99
+Weighted average grant-date fair value (per share)$5.80 $4.53 $4.99
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+Aggregate unearned stock-based compensation expense$627 $381
+    
+Estimated weighted average remaining amortization period(In years)
+Stock options0.5 1.1
+RSUs, PSUs and market-based PSUs2.6 2.7
+ESPP0.6 0.7
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (Using the Black-Scholes model)
+ESPP     
+Weighted average expected life (in years)0.5-2.0 0.5-2.0 0.5-2.0
+Risk-free interest rate0.5%-0.9% 0.1%-0.7% 0.1%-0.5%
+Volatility30%-39% 24%-34% 23%-31%
+Dividend yield0.7%-1.4% 1.5%-1.8% 1.7%-1.9%
+
+
+ RSUs, PSUs and Market-based PSUs Outstanding Options Outstanding
+ Number ofShares WeightedAverageGrant-DateFair Value Number ofShares Weighted Average Exercise PricePer Share WeightedAverageRemaining  Contractual Life Aggregate IntrinsicValue (3)
+ (In millions, except years and per share data)
+Balances, January 31, 201626 $19.12 13 $14.49    
+Granted (1)(2)12 $50.57 — —    
+Exercised— — (6) $14.52    
+Vested restricted stock(10) $17.93 — —    
+Canceled and forfeited(1) $23.68 — —    
+Balances, January 29, 201727 $32.84 7 $14.47 5.4 $724
+Exercisable as of January 29, 2017    7 $14.39 5.3 $667
+Vested and expected to vest after January 29, 201723 $32.74 7 $14.46 5.4 $715
+
+(1)Includes PSUs that will be issued and eligible to vest based on the corporate financial performance maximum target level achieved for fiscal year 2017. 
+
+(2)Includes market-based PSUs that will be issued and eligible to vest if the maximum target for total shareholder return, or TSR, over the 3-year measurement period is achieved. Depending on the ranking of our TSR compared to the respective TSRs of the companies comprising the Standard & Poor’s 500 Index during a 3-year measurement period, the market-based PSUs issued could range from 0 to 0.3 million shares.
+
+(3)The aggregate intrinsic value in the table above represents the total pre-tax intrinsic value for in-the-money options at January 29, 2017, based on the $111.77 closing price of our common stock on January 27, 2017.
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (In millions, except per share data)
+Numerator:     
+Net income$1,666 $614 $631
+Denominator:     
+Basic weighted average shares541 543 552
+Dilutive impact of outstanding securities:     
+Equity awards26 13 11
+1.00% Convertible Senior Notes 44 13 —
+Warrants issued with the 1.00% Convertible Senior Notes38 — —
+Diluted weighted average shares649 569 563
+Net income per share:     
+Basic (1)$3.08 $1.13 $1.14
+Diluted (2)$2.57 $1.08 $1.12
+Equity awards excluded from diluted net income per share because their effect would have been anti-dilutive8 10 12
+
+(1)Calculated as net income divided by basic weighted average shares.
+
+(2)Calculated as net income divided by diluted weighted average shares.
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+Icera$271 $271
+PortalPlayer105 105
+Mental Images59 59
+3dfx50 50
+MediaQ35 35
+ULi31 31
+Hybrid Graphics28 28
+Ageia19 19
+Portland Group Inc.2 2
+Other18 18
+Total goodwill$618 $618
+
+
+ January 29, 2017 January 31, 2016
+ Gross CarryingAmount AccumulatedAmortization Net CarryingAmount Gross CarryingAmount AccumulatedAmortization Net CarryingAmount
+ (In millions) (In millions)
+Acquisition-related intangible assets$193 $(167) $26 $193 $(152) $41
+Patents and licensed technology468 (390) 78 462 (337) 125
+Total intangible assets$661 $(557) $104 $655 $(489) $166
+
+
+ January 29, 2017
+ AmortizedCost UnrealizedGain UnrealizedLoss EstimatedFair Value
+ (In millions)
+Corporate debt securities$2,397 $1 $(10) $2,388
+Debt securities of United States government agencies1,193 — (5) 1,188
+Debt securities issued by the United States Treasury852 — (2) 850
+Asset-backed securities490 — (1) 489
+Money market funds321 — — 321
+Mortgage backed securities issued by United States government-sponsored enterprises161 2 (1) 162
+Foreign government bonds70 — — 70
+Total$5,484 $3 $(19) $5,468
+Classified as:       
+Cash equivalents      $436
+Marketable securities      5,032
+Total      $5,468
+
+
+ January 31, 2016
+ AmortizedCost UnrealizedGain UnrealizedLoss EstimatedFair Value
+ (In millions)
+Corporate debt securities$1,903 $1 $(3) $1,901
+Debt securities of United States government agencies1,170 1 (1) 1,170
+Debt securities issued by the United States Treasury800 1 — 801
+Asset-backed securities435 — — 435
+Mortgage backed securities issued by United States government-sponsored enterprises229 3 (1) 231
+Foreign government bonds92 — — 92
+Money market funds43 — — 43
+Total$4,672 $6 $(5) $4,673
+Classified as:       
+Cash equivalents      $232
+Marketable securities      4,441
+Total      $4,673
+
+
+ Less than 12 Months 12 Months or Greater Total
+ Fair Value GrossUnrealizedLosses Fair Value GrossUnrealizedLosses Fair Value GrossUnrealizedLosses
+ (In millions)
+Corporate debt securities$1,721 $(10) $55 $— $1,776 $(10)
+Debt securities issued by United States government agencies906 (5) 28 — 934 (5)
+Debt securities issued by the US Treasury629 (2) — — 629 (2)
+Mortgage backed securities issued by United States government-sponsored enterprises43 — 35 (1) 78 (1)
+Asset-backed securities383 (1) 3 — 386 (1)
+Total$3,682 $(18) $121 $(1) $3,803 $(19)
+
+
+ January 29, 2017 January 31, 2016
+ AmortizedCost EstimatedFair Value AmortizedCost EstimatedFair Value
+ (In millions)
+Less than one year$2,209 $2,209 $1,619 $1,619
+Due in 1 - 5 years3,210 3,194 3,019 3,020
+Mortgage-backed securities issued by government-sponsored enterprises not due at a single maturity date65 65 34 34
+Total$5,484 $5,468 $4,672 $4,673
+
+
+  Fair Value at
+ Pricing Category January 29, 2017 January 31, 2016
+   (In millions)
+Assets     
+Cash equivalents and marketable securities:     
+Corporate debt securities (1)Level 2 $2,388 $1,901
+Debt securities of U.S. government agencies (2)Level 2 $1,188 $1,170
+Debt securities issued by the United States Treasury (3)Level 2 $850 $801
+Asset-backed securities (4)Level 2 $489 $435
+Money market funds (5)Level 1 $321 $43
+Mortgage-backed securities issued by United States government-sponsored enterprises (4)Level 2 $162 $231
+Foreign government bonds (4)Level 2 $70 $92
+      
+Liabilities     
+Current liability:     
+1.00% Convertible Senior Notes (6)Level 2 $4,474 $2,273
+Other noncurrent liabilities:     
+2.20% Notes Due 2021 (6)Level 2 $975 $—
+3.20% Notes Due 2026 (6)Level 2 $961 $—
+Interest rate swap (7)Level 2 $2 $7
+
+(1)Included $33 million and $51 million in cash equivalents as of January 29, 2017 and January 31, 2016, respectively, and $2.35 billion and $1.85 billion in marketable securities as of January 29, 2017 and January 31, 2016, respectively, on the Consolidated Balance Sheets.
+
+(2)Included $27 million and $90 million in cash equivalents as of January 29, 2017 and January 31, 2016, respectively, and $1.16 billion and $1.08 billion in marketable securities as of January 29, 2017 and January 31, 2016, respectively, on the Consolidated Balance Sheets.
+
+(3)Included $55 million in cash equivalents as of January 29, 2017 and $795 million and $801 million in marketable securities as of January 29, 2017 and January 31, 2016, respectively, on the Consolidated Balance Sheets. 
+
+(4)Reported in marketable securities on the Consolidated Balance Sheets.
+
+(5)Reported in cash equivalents on the Consolidated Balance Sheets.
+
+(6)The 1.00% Convertible Notes, 2.20% Notes Due 2021, and 3.20% Notes Due 2026 are carried on our Consolidated Balance Sheets at their original issuance value, net of unamortized debt discount and issuance costs, and are not marked to fair value each period. See Note 11 of these Notes to the Consolidated Financial Statements for additional information.
+
+(7)Please refer to Note 9 of these Notes to Consolidated Financial Statements for a discussion regarding our interest rate swap.
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+Inventories:   
+Raw materials$252 $105
+Work in-process176 103
+Finished goods366 210
+     Total inventories$794 $418
+
+
+ January 29, 2017 January 31, 2016 EstimatedUseful Life
+ (In millions) (In years)
+Property and Equipment:     
+Land$218 $218 (A)
+Building13 13 25-30
+Test equipment427 354 3-5
+Computer equipment188 155 3-5
+Leasehold improvements176 174 (B)
+Software and licenses63 98 3-5
+Office furniture and equipment49 48 5
+Capital leases28 28 (B)
+Construction in process29 12 (C)
+Total property and equipment, gross1,191 1,100  
+Accumulated depreciation and amortization(670) (634)  
+     Total property and equipment, net$521 $466  
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+Accrued Liabilities:   
+Customer related liabilities (1)$197 $160
+Accrued payroll and related expenses137 79
+Deferred revenue (2)85 322
+Coupon interest on debt obligations21 3
+Accrued restructuring and other charges (3)13 23
+Professional service fees13 23
+Warranty accrual (4)8 11
+Accrued royalties7 1
+Leases payable4 4
+Taxes payable4 2
+Contributions payable4 3
+Other14 11
+Total accrued and other current liabilities$507 $642
+
+(2)Deferred revenue under our patent cross licensing agreement with Intel Corporation will expire in March 2017. We will be recognizing revenue under this agreement through the first quarter of fiscal year 2018. 
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+Other Long Term Liabilities:   
+Deferred income tax liability (1)$141 $301
+Income tax payable96 78
+Contributions payable10 13
+Deferred revenue (2)4 44
+Other20 17
+Total other long-term liabilities$271 $453
+
+
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (In millions)
+Balance at beginning of period$11 $8 $8
+Additions2 27 5
+Deductions(5) (24) (5)
+Balance at end of period $8 $11 $8
+
+
+ January 29, 2017 January 31, 2016
+ (In millions)
+1.00% Convertible Senior Notes$827 $1,500
+Unamortized debt discount (1)(31) (87)
+Net carrying amount$796 $1,413
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+ (In millions)
+Contractual coupon interest expense$9 $15 $15
+Amortization of debt discount24 29 28
+Total interest expense related to Convertible Notes$33 $44 $43
+
+
+  ExpectedRemaining Term (years) EffectiveInterest Rate January 29, 2017
+      (In millions)
+2.20% Notes Due 2021 4.6 2.38% $1,000
+3.20% Notes Due 2026 9.6 3.31% 1,000
+Unamortized debt discount and issuance costs     (17)
+Net carrying amount     $1,983
+
+
+ Future Minimum Lease Obligations
+ (In millions)
+Fiscal Year: 
+2018$42
+201936
+202020
+202117
+202212
+2023 and thereafter13
+Total$140
+
+
+ Future Capital Lease Obligations
+ (In millions)
+Fiscal Year: 
+2018$5
+20196
+Total$11
+Present value of minimum lease payments$10
+  
+Current portion$4
+Long-term portion$6
+
+
+ Year Ended
+ January 29,2017 January 31,2016 January 25,2015
+ (In millions)
+Current income taxes:     
+Federal$7 $(43) $8
+State1 1 1
+Foreign34 25 17
+Total current42 (17) 26
+Deferred taxes:     
+Federal199 134 84
+State— — —
+Foreign(2) — (1)
+Total deferred197 134 83
+Charge in lieu of taxes attributable to employer stock option plans— 12 15
+Income tax expense$239 $129 $124
+
+
+ Year Ended
+ January 29,2017 January 31,2016 January 25,2015
+ (In millions)
+Domestic$600 $129 $174
+Foreign1,305 614 581
+Income before income tax$1,905 $743 $755
+
+
+ Year Ended
+ January 29,2017 January 31,2016 January 25,2015
+ (In millions)
+Tax expense computed at federal statutory rate$667 $260 $264
+Tax expense related to intercompany transaction10 10 10
+State income taxes, net of federal tax effect4 1 1
+Foreign tax rate differential(315) (95) (120)
+Stock-based compensation (1)(70) 13 4
+U.S. federal R&D tax credit(52) (38) (34)
+Restructuring and expiration of statute of limitations— (21) —
+Other(5) (1) (1)
+Income tax expense$239 $129 $124
+
+(1)We adopted an accounting standard related to stock-based compensation effective February 1, 2016, which required the excess tax benefit to be reflected in our provision for income taxes rather than in additional paid-in-capital. The total related excess tax benefit recognized for fiscal year 2017 was $82 million. Please refer to Note 1 of these Notes to the Consolidated Financial Statements for additional information.
+
+
+ January 29,2017 January 31,2016
+ (In millions)
+Deferred tax assets: 
+Net operating loss carryforwards (1)$199 $57
+Accruals and reserves, not currently deductible for tax purposes40 58
+Property, equipment and intangible assets50 50
+Research and other tax credit carryforwards (1)728 404
+Stock-based compensation34 29
+Convertible debt6 9
+Gross deferred tax assets1,057 607
+Less valuation allowance (1)(353) (272)
+Total deferred tax assets704 335
+Deferred tax liabilities:   
+Acquired intangibles(11) (17)
+Unremitted earnings of foreign subsidiaries(827) (615)
+Gross deferred tax liabilities(838) (632)
+Net deferred tax liability$(134) $(297)
+
+(1)Balances as of January 29, 2017 reflect the adoption of an accounting standard related to stock-based compensation. Please refer to Note 1 of these Notes to the Consolidated Financial Statements for additional information.
+
+
+ January 29,2017 January 31,2016 January 25,2015
+ (In millions)
+Balance at beginning of period$230 $254 $238
+Increases in tax positions for prior years3 — —
+Decreases in tax positions for prior years— (1) (1)
+Increases in tax positions for current year46 28 23
+Settlements(48) — —
+Lapse in statute of limitations(7) (51) (6)
+Balance at end of period$224 $230 $254
+
+
+ GPU Tegra Processor All Other Consolidated
+ (In millions)
+Year Ended January 29, 2017:       
+Revenue$5,822 $824 $264 $6,910
+Depreciation and amortization expense$116 $29 $42 $187
+Operating income (loss)$2,180 $(9) $(237) $1,934
+Year Ended January 31, 2016:       
+Revenue$4,187 $559 $264 $5,010
+Depreciation and amortization expense$110 $43 $44 $197
+Operating income (loss)$1,344 $(239) $(358) $747
+Year Ended January 25, 2015:       
+Revenue$3,839 $579 $264 $4,682
+Depreciation and amortization expense$117 $57 $46 $220
+Operating income (loss)$1,113 $(254) $(100) $759
+
+
+  Year Ended
+  January 29, 2017 January 31, 2016 January 25, 2015
+  (In millions)
+Reconciling items included in "All Other" category:    
+Unallocated revenue $264 $264 $264
+Stock-based compensation (247) (204) (158)
+Unallocated cost of revenue and operating expenses (215) (244) (169)
+Acquisition-related costs (16) (22) (37)
+Legal settlement costs (16) — —
+Contributions (4) — —
+Restructuring and other charges (3) (131) —
+Product warranty charges — (21) —
+Total $(237) $(358) $(100)
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Revenue:(In millions)
+Taiwan$2,546 $1,912 $1,594
+China1,305 806 922
+Other Asia Pacific1,010 749 638
+United States904 643 791
+Europe659 482 369
+Other Americas486 418 368
+Total revenue$6,910 $5,010 $4,682
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Revenue:(In millions)
+Gaming$4,060 $2,818 $2,058
+Professional Visualization835 750 795
+Datacenter830 339 317
+Automotive487 320 183
+OEM & IP698 783 1,329
+Total revenue$6,910 $5,010 $4,682
+
+
+ January 29, 2017 January 31, 2016
+Long-lived assets:(In millions)
+United States$440 $414
+Taiwan52 39
+India47 45
+China34 25
+Europe9 9
+Other Asia Pacific1 1
+Total long-lived assets$583 $533
+
+
+ Year Ended
+ January 29, 2017 January 31, 2016 January 25, 2015
+Revenue:     
+Customer A12% 11% 11%
+
+
+ January 29, 2017 January 31, 2016
+Accounts Receivable:   
+Customer B19% 21%
+Customer C10% 7%
+
+
+ Year Ended
+ January 29, January 31,
+ 2017 2016
+ (In millions)
+Employee severance and related costs$5 $82
+Tax subsidy (refund) impairment(3) 17
+Facilities and related costs— 27
+Other exit costs1 5
+Restructuring and other charges$3 $131
+
+
+ January 29, January 31,
+ 2017 2016
+ (In millions)
+Balance at beginning of period$23 $—
+Restructuring and other charges3 131
+Cash payments(13) (63)
+Non-cash adjustments— (45)
+Balance at end of period$13 $23
+
+
+ Fiscal Year 2017Quarters Ended
+ January 29, 2017 October 30, 2016 July 31,2016 May 1, 2016
+ (In millions, except per share data)
+Statements of Income Data:       
+Revenue$2,173 $2,004 $1,428 $1,305
+Cost of revenue$870 $821 $602 $554
+Gross profit$1,303 $1,183 $826 $751
+Net income (1)$655 $542 $261 $208
+Net income per share (1):       
+Basic$1.18 $1.01 $0.49 $0.39
+Diluted$0.99 $0.83 $0.41 $0.35
+
+(1)In the third quarter of fiscal year 2017, we adopted an accounting standard related to stock-based compensation, which requires adjustments to be reflected beginning in fiscal year 2017. The adoption of the new accounting standard impacted our previously reported quarterly results for fiscal year 2017 as follows:
+
+
+ Three Months Ended Six Months Ended
+ July 31, 2016 May 1, 2016 July 31, 2016
+ As reported As adjusted As reported As adjusted As reported As adjusted
+ (In millions, except per share data)
+Condensed Consolidated Statements of Income:           
+Income tax expense$64 $56 $45 $33 $109 $89
+Net income $253 $261 $196 $208 $449 $469
+Basic net income per share$0.47 $0.49 $0.36 $0.39 $0.84 $0.88
+Diluted net income per share$0.40 $0.41 $0.33 $0.35 $0.73 $0.76
+Weighted average shares used in diluted net income per share computation 631 634 597 599 617 620
+            
+Condensed Consolidated Statements of Cash Flows:           
+Net cash provided by operating activities$184 $201 $309 $318 $493 $519
+Net cash used in financing activities$(35) $(52) $(534) $(545) $(570) $(597)
+
+
+ Fiscal Year 2016Quarters Ended
+ January 31, 2016 October 25, 2015 July 26,2015 April 26, 2015
+ (In millions, except per share data)
+Statements of Income Data:       
+Revenue$1,401 $1,305 $1,153 $1,151
+Cost of revenue$610 $572 $519 $498
+Gross profit$791 $733 $634 $653
+Net income$207 $247 $26 $134
+Net income per share:       
+Basic$0.38 $0.45 $0.05 $0.24
+Diluted$0.35 $0.44 $0.05 $0.24
+
+
+Description Balance atBeginning of Period Additions Deductions Balance atEnd of Period
+  (In millions)
+Fiscal year 2017        
+Allowance for doubtful accounts $2 $1(1)$—(1)$3
+Sales return allowance $9 $9(2)$(8)(4)$10
+Deferred tax valuation allowance $272 $81(3)$— $353
+Fiscal year 2016        
+Allowance for doubtful accounts $3 $—(1)$(1)(1)$2
+Sales return allowance $14 $9(2)$(14)(4)$9
+Deferred tax valuation allowance $261 $11(3)$— $272
+Fiscal year 2015        
+Allowance for doubtful accounts $1$3(1)$(1)(1)$3
+Sales return allowance $14$12(2)$(12)(4)$14
+Deferred tax valuation allowance $244$17(3)$— $261
+
+
+    Incorporated by Reference   
+Exhibit No. Exhibit Description Schedule/Form File Number Exhibit Filing Date
+3.1 Amended and Restated Certificate of Incorporation S-8 333-74905 4.1 3/23/1999
+3.2 Certificate of Amendment of Amended and Restated Certificate of Incorporation 10-Q 0-23985 3.1 8/21/2008
+3.3 Certificate of Amendment of Amended and Restated Certificate of Incorporation 8-K 0-23985 3.1 5/24/2011
+3.4 Bylaws of NVIDIA Corporation, Amended and Restated as of November 29, 2016 8-K 0-23985 3.1 12/1/2016
+4.1 Reference is made to Exhibits 3.1, 3.2, 3.3 and 3.4        
+4.2 Specimen Stock Certificate S-1/A 333-47495 4.2 4/24/1998
+4.3 Indenture (including the form of Notes) dated December 2, 2013 between NVIDIA Corporation and Wells Fargo Bank, National Association 8-K 0-23985 4.1 12/2/2013
+4.4 Form of 1.00% Convertible Senior Note due 2018 (included in Exhibit 4.3) 8-K 0-23985 4.2 12/2/2013
+4.5 Indenture, dated as of September 16, 2016, by and between the Company and Wells Fargo Bank, National Association, as Trustee 8-K 0-23985 4.1 9/16/2016
+4.6 Officers’ Certificate, dated as of September 16, 2016 8-K 0-23985 4.2 9/16/2016
+4.7 Form of 2021 Note 8-K 0-23985 Annex A to Exhibit 4.2 9/16/2016
+4.8 Form of 2026 Note 8-K 0-23985 Annex B to Exhibit 4.2 9/16/2016
+10.1 Form of Indemnity Agreement between NVIDIA Corporation and each of its directors and officers 8-K 0-23985 10.1 3/7/2006
+10.2+ Amended and Restated 2007 Equity Incentive Plan 8-K 0-23985 10.1 5/23/2016
+10.3+ 2007 Equity Incentive Plan - Non-Statutory Stock Option (Annual Grant - Board Service (2011)) 10-Q 0-23985 10.41 5/27/2011
+10.4+ 2007 Equity Incentive Plan - Non-Statutory Stock Option (Initial Grant - Board Service (2011)) 8-K 0-23985 10.1 12/14/2011
+10.5+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Stock Option Grant (2012 Annual Board Retainer) 10-Q 0-23985 10.4 5/23/2012
+10.6+ 2007 Equity Incentive Plan - Non Statutory Stock Option 8-K 0-23985 10.2 9/13/2010
+10.7+ 2007 Equity Incentive Plan - Incentive Stock Option 8-K 0-23985 10.21 9/13/2010
+10.8+ Amended and Restated 2007 Equity Incentive Plan - Non Statutory Stock Option 10-Q 0-23985 10.1 8/22/2012
+10.9+ Amended and Restated 2007 Equity Incentive Plan - Incentive Stock Option 10-Q 0-23985 10.2 8/22/2012
+10.10+ 2007 Equity Incentive Plan - Restricted Stock Unit Grant Notice and Restricted Stock Unit Purchase Agreement 10-Q 0-23985 10.22 12/7/2010
+10.11+ Amended and Restated 2007 Equity Incentive Plan - Restricted Stock Unit Grant Notice and Restricted Stock Unit Purchase Agreement 10-Q 0-23985 10.3 8/22/2012
+
+
+10.12+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit (without deferral option) 10-Q 0-23985 10.2 5/23/2012
+10.13+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit (with deferral option) 10-Q 0-23985 10.3 5/23/2012
+10.14+ Amended and Restated 2007 Equity Incentive Plan - Non Statutory Stock Option (Initial Grant - Board Service) 8-K 0-23985 10.1 7/23/2013
+10.15+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Deferred Restricted Stock Unit Grant Notice and Deferred Restricted Stock Unit Agreement (2015) 10-K 0-23985 10.25 3/2/2015
+10.16+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Deferred Restricted Stock Unit Grant Notice and Deferred Restricted Stock Unit Agreement (2016) 10-K 0-23985 10.26 3/2/2015
+10.17+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit Grant Notice and Restricted Stock Unit Agreement (2016) 10-K 0-23985 10.27 3/2/2015
+10.18+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit (Initial Grant - with deferral options) 10-Q 0-23985 10.1 5/20/2015
+10.19+ Amended and Restated 2007 Equity Incentive Plan - Restricted Stock Unit Grant Notice and Restricted Stock Unit Agreement & Performance-Based Restricted Stock Unit Grant Notice and Performance-Based Restricted Stock Unit Agreement (2015) 10-Q 0-23985 10.2 5/20/2015
+10.20+ Amended and Restated 2012 Employee Stock Purchase Plan 8-K 0-23985 10.2 5/23/2016
+10.21+ Fiscal Year 2016 Variable Compensation Plan 8-K 0-23985 10.1 4/10/2015
+10.22+ Fiscal Year 2017 Variable Compensation Plan 8-K 0-23985 10.1 3/14/2016
+10.23+ Offer Letter between NVIDIA Corporation and Colette Kress, dated September 13, 2013 8-K 0-23985 10.1 9/16/2013
+10.24+ Offer Letter between NVIDIA Corporation and Tim Teter, dated December 16, 2016 8-K 0-23985 10.1 1/19/2017
+10.25 Master Confirmation and Supplemental Confirmation between NVIDIA Corporation and Goldman, Sachs & Co., dated May 14, 2013 10-Q 0-23985 10.3 5/22/2013
+10.26 Base Convertible Note Hedge Transaction Confirmation 8-K 0-23985 99.1 12/2/2013
+10.27 Base Warrant Transaction Confirmation 8-K 0-23985 99.2 12/2/2013
+10.28 Additional Convertible Note Hedge Transaction Confirmation 8-K 0-23985 99.3 12/2/2013
+10.29 Additional Warrant Transaction Confirmation 8-K 0-23985 99.4 12/2/2013
+10.30 Termination Agreement, dated as of December 12, 2016, by and between NVIDIA Corporation and Goldman, Sachs & Co. 8-K 0-23985 10.1 12/13/2016
+10.31^ Participation Agreement dated June 19, 2015 among NVIDIA Land Development, LLC, Wachovia Service Corporation, Wells Fargo Bank, National Association, and a syndicate of other institutions 10-Q 0-23985 10.1 8/19/2015
+
+
+10.32 First Amendment to Participation Agreement dated February 17, 2016 among NVIDIA Land Development, LLC, Wachovia Service Corporation, and Wells Fargo Bank, N.A., and a syndicate of other institutions 10-Q 0-23985 10.1 5/25/2016
+10.33 Second Amendment to Participation Agreement dated September 9, 2016 among NVIDIA Land Development, LLC, Wachovia Service Corporation, and Wells Fargo Bank, N.A., and a syndicate of other institutions 10-Q 0-23985 10.1 11/22/2016
+10.34* Third Amendment to Participation Agreement dated January 27, 2017 among NVIDIA Land Development, LLC, Wachovia Service Corporation, and Wells Fargo Bank, N.A., and a syndicate of other institutions        
+10.35 Agency Agreement dated June 19, 2015 between NVIDIA Land Development, LLC and Wachovia Service Corporation 10-Q 0-23985 10.2 8/19/2015
+10.36 Real Property Lease Agreement dated June 19, 2015 between Wachovia Service Corporation and NVIDIA Land Development, LLC 10-Q 0-23985 10.3 8/19/2015
+10.37 Credit Agreement, dated as of October 7, 2016 by and among NVIDIA Corporation, Wells Fargo Bank, National Association, as administrative agent, and the lenders party thereto 8-K 0-23985 1.1 10/13/2016
+21.1* List of Registrant's Subsidiaries 
+23.1* Consent of PricewaterhouseCoopers LLP 
+24.1* Power of Attorney (included in signature page) 
+31.1* Certification of Chief Executive Officer as required by Rule 13a-14(a) of the Securities Exchange Act of 1934
+31.2* Certification of Chief Financial Officer as required by Rule 13a-14(a) of the Securities Exchange Act of 1934
+32.1#* Certification of Chief Executive Officer as required by Rule 13a-14(b) of the Securities Exchange Act of 1934
+32.2#* Certification of Chief Financial Officer as required by Rule 13a-14(b) of the Securities Exchange Act of 1934
+101.INS*  XBRL Instance Document 
+101.SCH*  XBRL Taxonomy Extension Schema Document 
+101.CAL*  XBRL Taxonomy Extension Calculation Linkbase Document 
+101.DEF*  XBRL Taxonomy Extension Definition Linkbase Document 
+101.LAB*  XBRL Taxonomy Extension Labels Linkbase Document 
+101.PRE* XBRL Taxonomy Extension Presentation Linkbase Document 
+
+
+NVIDIA Corporation
+By:/s/  Jen-Hsun Huang 
+ Jen-Hsun Huang
+ President and Chief Executive Officer
+
+
+SignatureTitleDate
+/s/ JEN-HSUN HUANG President, Chief Executive Officer and Director(Principal Executive Officer)March 1, 2017
+Jen-Hsun Huang  
+/s/ COLETTE M. KRESS Executive Vice President and Chief Financial Officer(Principal Financial Officer)March 1, 2017
+Colette M. Kress  
+/s/ MICHAEL J. BYRON Vice President and Chief Accounting Officer(Principal Accounting Officer)March 1, 2017
+Michael J. Byron  
+/s/ TENCH COXE  DirectorMarch 1, 2017
+Tench Coxe   
+/s/ MARK STEVENS DirectorMarch 1, 2017
+Mark Stevens   
+/s/ JAMES C. GAITHERDirectorMarch 1, 2017
+James C. Gaither   
+/s/ HARVEY C. JONES DirectorMarch 1, 2017
+Harvey C. Jones  
+/s/ MARK L. PERRY DirectorMarch 1, 2017
+Mark L. Perry   
+ Director 
+William J. Miller  
+/s/ A. BROOKE SEAWELLDirectorMarch 1, 2017
+A. Brooke Seawell   
+/s/ ROBERT BURGESSDirectorMarch 1, 2017
+Robert Burgess  
+/s/ DAWN HUDSONDirectorMarch 1, 2017
+Dawn Hudson  
+/s/ MICHAEL MCCAFFERYDirectorMarch 1, 2017
+Michael McCaffery  
+ Director 
+Persis Drell  
+
+
+    Incorporated by Reference   
+Exhibit No. Exhibit Description Schedule/Form File Number Exhibit Filing Date
+3.1 Amended and Restated Certificate of Incorporation S-8 333-74905 4.1 3/23/1999
+3.2 Certificate of Amendment of Amended and Restated Certificate of Incorporation 10-Q 0-23985 3.1 8/21/2008
+3.3 Certificate of Amendment of Amended and Restated Certificate of Incorporation 8-K 0-23985 3.1 5/24/2011
+3.4 Bylaws of NVIDIA Corporation, Amended and Restated as of November 29, 2016 8-K 0-23985 3.1 12/1/2016
+4.1 Reference is made to Exhibits 3.1, 3.2, 3.3 and 3.4        
+4.2 Specimen Stock Certificate S-1/A 333-47495 4.2 4/24/1998
+4.3 Indenture (including the form of Notes) dated December 2, 2013 between NVIDIA Corporation and Wells Fargo Bank, National Association 8-K 0-23985 4.1 12/2/2013
+4.4 Form of 1.00% Convertible Senior Note due 2018 (included in Exhibit 4.3) 8-K 0-23985 4.2 12/2/2013
+4.5 Indenture, dated as of September 16, 2016, by and between the Company and Wells Fargo Bank, National Association, as Trustee 8-K 0-23985 4.1 9/16/2016
+4.6 Officers’ Certificate, dated as of September 16, 2016 8-K 0-23985 4.2 9/16/2016
+4.7 Form of 2021 Note 8-K 0-23985 Annex A to Exhibit 4.2 9/16/2016
+4.8 Form of 2026 Note 8-K 0-23985 Annex B to Exhibit 4.2 9/16/2016
+10.1 Form of Indemnity Agreement between NVIDIA Corporation and each of its directors and officers 8-K 0-23985 10.1 3/7/2006
+10.2+ Amended and Restated 2007 Equity Incentive Plan 8-K 0-23985 10.1 5/23/2016
+10.3+ 2007 Equity Incentive Plan - Non-Statutory Stock Option (Annual Grant - Board Service (2011)) 10-Q 0-23985 10.41 5/27/2011
+10.4+ 2007 Equity Incentive Plan - Non-Statutory Stock Option (Initial Grant - Board Service (2011)) 8-K 0-23985 10.1 12/14/2011
+10.5+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Stock Option Grant (2012 Annual Board Retainer) 10-Q 0-23985 10.4 5/23/2012
+10.6+ 2007 Equity Incentive Plan - Non Statutory Stock Option 8-K 0-23985 10.2 9/13/2010
+10.7+ 2007 Equity Incentive Plan - Incentive Stock Option 8-K 0-23985 10.21 9/13/2010
+10.8+ Amended and Restated 2007 Equity Incentive Plan - Non Statutory Stock Option 10-Q 0-23985 10.1 8/22/2012
+10.9+ Amended and Restated 2007 Equity Incentive Plan - Incentive Stock Option 10-Q 0-23985 10.2 8/22/2012
+10.10+ 2007 Equity Incentive Plan - Restricted Stock Unit Grant Notice and Restricted Stock Unit Purchase Agreement 10-Q 0-23985 10.22 12/7/2010
+
+
+10.11+ Amended and Restated 2007 Equity Incentive Plan - Restricted Stock Unit Grant Notice and Restricted Stock Unit Purchase Agreement 10-Q 0-23985 10.3 8/22/2012
+10.12+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit (without deferral option) 10-Q 0-23985 10.2 5/23/2012
+10.13+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit (with deferral option) 10-Q 0-23985 10.3 5/23/2012
+10.14+ Amended and Restated 2007 Equity Incentive Plan - Non Statutory Stock Option (Initial Grant - Board Service) 8-K 0-23985 10.1 7/23/2013
+10.15+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Deferred Restricted Stock Unit Grant Notice and Deferred Restricted Stock Unit Agreement (2015) 10-K 0-23985 10.25 3/2/2015
+10.16+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Deferred Restricted Stock Unit Grant Notice and Deferred Restricted Stock Unit Agreement (2016) 10-K 0-23985 10.26 3/2/2015
+10.17+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit Grant Notice and Restricted Stock Unit Agreement (2016) 10-K 0-23985 10.27 3/2/2015
+10.18+ Amended and Restated 2007 Equity Incentive Plan - Non-Employee Director Restricted Stock Unit (Initial Grant - with deferral options) 10-Q 0-23985 10.1 5/20/2015
+10.19+ Amended and Restated 2007 Equity Incentive Plan - Restricted Stock Unit Grant Notice and Restricted Stock Unit Agreement & Performance-Based Restricted Stock Unit Grant Notice and Performance-Based Restricted Stock Unit Agreement (2015) 10-Q 0-23985 10.2 5/20/2015
+10.20+ Amended and Restated 2012 Employee Stock Purchase Plan 8-K 0-23985 10.2 5/23/2016
+10.21+ Fiscal Year 2016 Variable Compensation Plan 8-K 0-23985 10.1 4/10/2015
+10.22+ Fiscal Year 2017 Variable Compensation Plan 8-K 0-23985 10.1 3/14/2016
+10.23+ Offer Letter between NVIDIA Corporation and Colette Kress, dated September 13, 2013 8-K 0-23985 10.1 9/16/2013
+10.24+ Offer Letter between NVIDIA Corporation and Tim Teter, dated December 16, 2016 8-K 0-23985 10.1 1/19/2017
+10.25 Master Confirmation and Supplemental Confirmation between NVIDIA Corporation and Goldman, Sachs & Co., dated May 14, 2013 10-Q 0-23985 10.3 5/22/2013
+10.26 Base Convertible Note Hedge Transaction Confirmation 8-K 0-23985 99.1 12/2/2013
+10.27 Base Warrant Transaction Confirmation 8-K 0-23985 99.2 12/2/2013
+10.28 Additional Convertible Note Hedge Transaction Confirmation 8-K 0-23985 99.3 12/2/2013
+10.29 Additional Warrant Transaction Confirmation 8-K 0-23985 99.4 12/2/2013
+10.30 Termination Agreement, dated as of December 12, 2016, by and between NVIDIA Corporation and Goldman, Sachs & Co. 8-K 0-23985 10.1 12/13/2016
+
+
+10.31^ Participation Agreement dated June 19, 2015 among NVIDIA Land Development, LLC, Wachovia Service Corporation, Wells Fargo Bank, National Association, and a syndicate of other institutions 10-Q 0-23985 10.1 8/19/2015
+10.32 First Amendment to Participation Agreement dated February 17, 2016 among NVIDIA Land Development, LLC, Wachovia Service Corporation, and Wells Fargo Bank, N.A., and a syndicate of other institutions 10-Q 0-23985 10.1 5/25/2016
+10.33 Second Amendment to Participation Agreement dated September 9, 2016 among NVIDIA Land Development, LLC, Wachovia Service Corporation, and Wells Fargo Bank, N.A., and a syndicate of other institutions 10-Q 0-23985 10.1 11/22/2016
+10.34* Third Amendment to Participation Agreement dated January 27, 2017 among NVIDIA Land Development, LLC, Wachovia Service Corporation, and Wells Fargo Bank, N.A., and a syndicate of other institutions        
+10.35 Agency Agreement dated June 19, 2015 between NVIDIA Land Development, LLC and Wachovia Service Corporation 10-Q 0-23985 10.2 8/19/2015
+10.36 Real Property Lease Agreement dated June 19, 2015 between Wachovia Service Corporation and NVIDIA Land Development, LLC 10-Q 0-23985 10.3 8/19/2015
+10.37 Credit Agreement, dated as of October 7, 2016 by and among NVIDIA Corporation, Wells Fargo Bank, National Association, as administrative agent, and the lenders party thereto 8-K 0-23985 1.1 10/13/2016
+21.1* List of Registrant's Subsidiaries 
+23.1* Consent of PricewaterhouseCoopers LLP 
+24.1* Power of Attorney (included in signature page) 
+31.1* Certification of Chief Executive Officer as required by Rule 13a-14(a) of the Securities Exchange Act of 1934
+31.2* Certification of Chief Financial Officer as required by Rule 13a-14(a) of the Securities Exchange Act of 1934
+32.1#* Certification of Chief Executive Officer as required by Rule 13a-14(b) of the Securities Exchange Act of 1934
+32.2#* Certification of Chief Financial Officer as required by Rule 13a-14(b) of the Securities Exchange Act of 1934
+101.INS*  XBRL Instance Document 
+101.SCH*  XBRL Taxonomy Extension Schema Document 
+101.CAL*  XBRL Taxonomy Extension Calculation Linkbase Document 
+101.DEF*  XBRL Taxonomy Extension Definition Linkbase Document 
+101.LAB*  XBRL Taxonomy Extension Labels Linkbase Document 
+101.PRE* XBRL Taxonomy Extension Presentation Linkbase Document 
