@@ -30,10 +30,42 @@ class Form10K_Data_Extractor:
 		self.forms = []
 		self.net_incomes = []
 		self.f10k_links = []
+		self.f10k_txt_links = []
 	
 	###################################
 	## Private methods
 	###################################
+
+	def __EDGAR_get_next_page(self):
+	
+		'''See the next 40 results of EDGAR'''		
+		
+		# Number of SEC filings to show per page on EDGAR	
+		count = 100
+		
+		#
+
+	def __compile_f10k_txt_links(self):
+		
+		## Maybe iterate in reverse, so net income data will be in chronological order?	
+		
+		link_base = "https://www.sec.gov"
+			
+		for link in self.f10k_links:
+			soup = BeautifulSoup(requests.get(link).content, "html5lib")	
+			
+			table_cells = soup.findAll("td")
+				
+			next_td_contains_link = False			
+	
+			for td in table_cells:
+				if (td.text == "Complete submission text file"):
+					next_td_contains_link = True
+
+				if (next_td_contains_link):	
+					f10k_txt_link = link_base + td.findNext("td").findChildren()[0]['href']	
+					self.f10k_txt_links.append(f10k_txt_link)
+					break
 
 	def __compile_f10k_links(self):
 		
@@ -55,40 +87,53 @@ class Form10K_Data_Extractor:
 	
 	def test(self):
 		self.__compile_f10k_links()
-		print(self.f10k_links)
+		self.__compile_f10k_txt_links()
+		print(self.f10k_txt_links)
 
 	
 	def __EDGAR_retrieve(self):
 
 		'''Retrieves all 10k forms from the SEC's EDGAR database'''
+		
+		self.__compile_f10k_links()	
+		self.__compile_f10k_txt_links()
+		
+		for link in self.f10k_txt_links:	
 
-		webpage = "https://www.sec.gov/Archives/edgar/data/1045810/000104581017000027/nvda-2017x10k.htm"		
-		soup = BeautifulSoup(requests.get(webpage).content, "html5lib")
-		self.forms.append(soup)
+			soup = BeautifulSoup(requests.get(link).content, "html5lib")
+			self.forms.append(soup)
 
 
 	def __compile_net_income_data(self):
-		## Assume that the 10K forms were retrieved in reverse chronological order
+		# Assume that the 10K forms were retrieved in reverse chronological order
 
 		self.__EDGAR_retrieve()
 		
-		## Regular expression for finding line with net income data on it
+		# Regular expression for finding line with net income data on it
 		ni_regex = re.compile(r"(Net income((\$(\d+,*)+)(\s|\xa0)*)+\n)")
 		
+		# Iterate over all available 10-K forms and extract historical
+		# net income data
 		for f in self.forms:
+			
+			# Convert set of table rows from HTML to
+			# a long string
 			trs = f.findAll("tr")
-
 			trs_text = ""
 			for tr in trs:
 				trs_text += tr.text + "\n"
 
+			# Find net income data in current 10-K form (via regex)
 			matches = ni_regex.findall(trs_text)
-	
-			ni_line = matches[0][0].replace("\xa0", " ").replace("\n", "")
-			ni_data = ni_line.split("$")
-			ni_data.pop(0)
 			
-			for i, e in enumerate(ni_data):
+			# Create (clean) list of historical net income values
+			# given in current 10-K form
+			ni_line = matches[0][0].replace("\xa0", " ") ## DATA CLEANING: replace &nbsp with regular space
+			ni_line = ni_line.replace("\n", "") ## DATA CLEANING: remove "\n"s from data
+			ni_data = ni_line.split("$") ## DATA CLEANING: create list of net incomes with no $ sign
+			ni_data.pop(0) ## DATA CLEANING: remove the word "Net income" from list
+			
+			for i, e in enumerate(ni_data): ## DATA CLEANING: remove commas and whitespace from net income values
 				if "," in e:
 					e = e.replace(",", "")
 				ni_data[i] = e.strip()	
@@ -102,4 +147,4 @@ class Form10K_Data_Extractor:
 
 		
 F = Form10K_Data_Extractor("NVDA")
-F.test()
+F.print_net_incomes()
