@@ -145,6 +145,12 @@ ax.text(extended_bars[0].get_x() + extended_bars[0].get_width() / 2, -150,
 	'%.2f %% growth' % (100 * ((extended_bars[1].get_height() - extended_bars[0].get_height()) / extended_bars[0].get_height())),
 	fontweight = 'bold', fontsize = 14)
 
+## Create legend for plot
+loss_rect = patches.Rectangle((0, 0), 1, 1, fc = 'salmon') # red rectangle
+gain_rect = patches.Rectangle((0, 0), 1, 1, fc = 'green') # green rectangle
+pred_rect = patches.Rectangle((0, 0), 1, 1, fc = 'gray') # gray rectangle
+plt.legend([loss_rect, gain_rect, pred_rect], ["Net loss", "Net gain", "Predicted"])
+
 ## Add labels and title to plot
 title = sys.argv[1] + " Annual Net Income " + "(%d - " % min(years) + "%d)" % max(years) 
 ax.set_title(title)
@@ -155,7 +161,8 @@ ax.set_ylabel('Net Income (in millions)')
 ax.set_facecolor('wheat')
 
 ## Adjust y range of plot
-ax.set_ylim(min(net_incomes) - 200, max(net_incomes) + 200)
+#ax.set_ylim(min(net_incomes + pred_net_incomes) - 200, max(net_incomes + pred_net_incomes) + 200)
+ax.margins(0.10)
 
 ## Make x-axis visible on plot
 ax.axhline(0, color = 'black')
