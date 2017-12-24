@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 import requests
 import re ## Regular expressions
 import pandas as pd
+import time
 from pprint import pprint
 
 
@@ -36,14 +37,32 @@ class Form10K_Data_Extractor:
 	## Private methods
 	###################################
 
-	def __EDGAR_get_next_page(self):
+	def __EDGAR_get_next_page(self, current_page):
 	
-		'''See the next 40 results of EDGAR'''		
+		'''See the next 100 results of EDGAR'''		
 		
 		# Number of SEC filings to show per page on EDGAR	
 		count = 100
 		
-		#
+		# Number of first SEC filing on current page
+		start = 0
+		
+		soup = BeautifulSoup(requests.get(current_page).content, "html5lib")	
+	
+		buttons = soup.findAll("input")
+			
+		link_base = "https://www.sec.gov"		
+
+		next_page_link = ""
+		
+		for b in buttons:
+			if (b['value'] == "Next 100"):
+				next_page_link = b['onclick'].replace("parent.location=", "")
+				next_page_link = link_base + next_page_link.replace("'", "")
+				break
+		
+		return next_page_link
+	
 
 	def __compile_f10k_txt_links(self):
 		
@@ -70,25 +89,30 @@ class Form10K_Data_Extractor:
 	def __compile_f10k_links(self):
 		
 		'''Creates a list of links to a company's 10K forms'''
+		
+		link_base = "https://www.sec.gov"	
+		webpage = "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=&dateb=&owner=exclude&start=0&count=100"
+		
+		while(webpage != ""):
+			
+			soup = BeautifulSoup(requests.get(webpage).content, "html5lib")
 
-		webpage = "https://www.sec.gov/cgi-bin/browse-edgar?CIK=NVDA&owner=exclude&action=getcompany"
-		soup = BeautifulSoup(requests.get(webpage).content, "html5lib")
+			table_rows = soup.findAll("tr")
 
-		table_rows = soup.findAll("tr")
-
-		link_base = "https://www.sec.gov"
-
-		for tr in table_rows:
-			tr_children = tr.findChildren()
-			for c in tr_children:
-				if c.text == "10-K":
-					link = link_base + c.findNext("td").findChildren()[0]['href']
-					self.f10k_links.append(link)
-	
+			for tr in table_rows:
+				tr_children = tr.findChildren()
+				for c in tr_children:
+					if c.text == "10-K":
+						link = link_base + c.findNext("td").findChildren()[0]['href']
+						self.f10k_links.append(link)
+			
+			webpage = self.__EDGAR_get_next_page(webpage)
+			time.sleep(1)
+		
 	def test(self):
 		self.__compile_f10k_links()
-		self.__compile_f10k_txt_links()
-		print(self.f10k_txt_links)
+#		self.__compile_f10k_txt_links()
+		print(self.f10k_links)
 
 	
 	def __EDGAR_retrieve(self):
@@ -147,4 +171,4 @@ class Form10K_Data_Extractor:
 
 		
 F = Form10K_Data_Extractor("NVDA")
-F.print_net_incomes()
+F.test()
