@@ -35,7 +35,7 @@ class Form10K_Data_Extractor:
 		self.forms = []
 		self.net_incomes = []
 		self.f10k_links = []
-		self.f10k_txt_links = []
+		self.f10k_file_links = []
 
 	
 	###################################
@@ -62,44 +62,23 @@ class Form10K_Data_Extractor:
 		return next_page_link
 
 
-	#def __compile_f10k_links(self):
-
-
-	#	'''Puts links to the 10-K forms into a single list'''
-
-	#	
-	#	# Iterate in reverse, so net income data will be in chronological order
-	#	for link in list(reversed(self.f10k_links)):
-	#		soup = BeautifulSoup(requests.get(link).content, "html5lib")	
-	#		
-	#		table_cells = soup.findAll("td")
-	#			
-	#		next_td_contains_link = False			
-	#
-	#		for td in table_cells:
-	#			if (td.text == "Complete submission text file"):
-	#				next_td_contains_link = True
-
-	#			if (next_td_contains_link):	
-	#				f10k_txt_link = self.link_base + td.findNext("td").findChildren()[0]['href']	
-	#				self.f10k_txt_links.append(f10k_txt_link)
-	#				break
-	#		time.sleep(1)
-
-	def __compile_f10k_links(self):
+	def __compile_f10k_links_p1(self):
 	
 	
-		'''Creates a list of links to a company's 10-K forms'''
+		'''Phase one of finding the links to the 10-K forms: 
+		   Gets all of the form 10-K links in the company's filings table on EDGAR'''
 
-		
-		url = "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + self._ticker + "&owner=exclude&action=getcompany&Find=Search"
-		
+		print("Phase one in progress...")
+
+		url_base = "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK="
+		url = url_base + self._ticker + "&type=&dateb=&owner=exclude&count=100"	
+
 		while(url != ""):
 			
 			# Ensure compliance with SEC access guidelines	
-			if (self.request_count == 10):
+			if (self.request_count >= 10):
 				self.request_count = 0
-				print("Sleeping...")
+				print("Sleeping to comply with SEC request guidelines...")
 				time.sleep(1)	
 			
 			# Turn current SEC page into html soup
@@ -108,8 +87,11 @@ class Form10K_Data_Extractor:
 
 			self.request_count += 1
 			
-			f10k_elems = soup.find_all('td', text = re.compile(r"10-K\d*"))
+			# Get all table elements that have the text "10-K" or "10-K405" in them	
+			f10k_elems = soup.find_all('td', text = re.compile(r"10-K\d*$"))
 			
+			# For each table element in f10k_elems,
+			# the next table element contains the link needed
 			for e in f10k_elems:
 				link = self.link_base + e.find_next('a')['href']
 				self.f10k_links.append(link)
@@ -120,27 +102,57 @@ class Form10K_Data_Extractor:
 			# Cleanup
 			soup.decompose()
 		
+		print("Phase one complete.")
+
+
+	def __compile_f10k_links_p2(self):
+
+
+		'''Phase two of finding the links to the 10-K forms:
+		   Visits every link compiled in phase one, and gets the 10-K form in either
+		   .html format (preferred, but not always available) or .txt format (if necessary)'''
+		
+		
+		print("Phase two in progress...")	
+		
+		for link in self.f10k_links:
+			
+
+			if (self.request_count >= 10):
+				self.request_count = 0
+				print("Sleeping to comply with SEC request guidelines...")
+				time.sleep(1)
+
+			file_list_page = requests.get(link).content	
+			soup = BeautifulSoup(file_list_page, "lxml")
+			self.request_count += 1
+
+			doc_table = soup.find("table", summary = "Document Format Files")
+			rows = doc_table.find_all("tr")
+			link_end = rows[1].find('a')['href']
+			if "." not in link_end:
+				link_end = rows[-1].find('a')['href']
+
+			link = self.link_base + link_end
+			print(link)
+	
 	def test(self):
-		self.__compile_f10k_links()
-		print(self.f10k_links)
-		print(self.request_count)
+		self.__compile_f10k_links_p1()
+		self.__compile_f10k_links_p2()
+		print(self.f10k_file_links)
 
 	
 	def __EDGAR_retrieve(self):
 
-		'''Retrieves all 10k forms from the SEC's EDGAR database'''
+		'''Retrieves all 10-K forms from the SEC's EDGAR database'''
 		
-#		self.__compile_f10k_links()	
-#		self.__compile_f10k_txt_links()
+		self.__compile_f10k_links_p1()	
+		self.__compile_f10k_links_p2()
 #		
 #		for link in self.f10k_txt_links:	
 #
 #			soup = BeautifulSoup(requests.get(link).content, "html5lib")
 #			self.forms.append(soup)
-		# ANK
-		test = "https://www.sec.gov/Archives/edgar/data/1045810/000104581017000027/0001045810-17-000027.txt"
-		webfile = requests.get(test).content
-		pprint(webfile)
 #		soup = BeautifulSoup(webfile, "html5lib")
 #		
 #		tds = soup.findAll("td")
@@ -193,5 +205,5 @@ class Form10K_Data_Extractor:
 		print(self.net_incomes)
 
 		
-F = Form10K_Data_Extractor("JNJ")
+F = Form10K_Data_Extractor("AAPL")
 F.test()
