@@ -42,23 +42,14 @@ class Form10K_Data_Extractor:
 	## Private methods
 	###################################
 
-	def __EDGAR_get_next_page_link(self, current_url):
+	def __EDGAR_get_next_page_url(self, current_soup):
 
 	
 		'''Navigate to the next page of EDGAR search results'''		
-	
-		# Ensure compliance with SEC access guidelines	
-		if (self.request_count == 10):
-			self.request_count = 0
-			time.sleep(1)
-		
-		# Turn current SEC page into html soup		
-		current_page = requests.get(current_url).content
-		self.request_count += 1
-		soup = BeautifulSoup(current_page, "lxml") # lxml is the fastest parser
+
 	
 		# Find the html object that contains the link to the next page of SEC filings 
-		next_page_buttons = soup.find_all(value = re.compile(r"Next \d+"))	
+		next_page_buttons = current_soup.find_all(value = re.compile(r"Next \d+"))	
 		
 		# If we are on the last page of filings, return the empty string to caller	
 		if (len(next_page_buttons) == 0):
@@ -67,9 +58,6 @@ class Form10K_Data_Extractor:
 			onclick_content = next_page_buttons[0]['onclick']	
 			next_page_link = self.link_base + onclick_content.replace("parent.location=", "").replace("'", "")
 	
-		# Cleanup
-		soup.decompose()
-		
 		# Return link to caller	
 		return next_page_link
 
@@ -114,18 +102,24 @@ class Form10K_Data_Extractor:
 			if (self.request_count == 10):
 				self.request_count = 0
 				time.sleep(1)	
-
+			
+			# Turn current SEC page into html soup
 			page = requests.get(url).content			
-			self.request_count += 1
 			soup = BeautifulSoup(page, "lxml")
+
+			self.request_count += 1
 			
 			f10k_elems = soup.find_all('td', text = re.compile(r"10-K\d*"))
 			
 			for e in f10k_elems:
 				link = self.link_base + e.find_next('a')['href']
 				self.f10k_links.append(link)
+			
+			# Get URL to next page of SEC filings
+			url = self.__EDGAR_get_next_page_url(current_soup = soup)
 
-			url = self.__EDGAR_get_next_page_link(url)
+			# Cleanup
+			soup.decompose()
 		
 	def test(self):
 		self.__compile_f10k_links()
