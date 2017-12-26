@@ -92,15 +92,14 @@ class Form10K_Data_Extractor:
 		'''Creates a list of links to a company's 10-K forms'''
 
 		
-		url = ("https://www.sec.gov/cgi-bin/browse-edgar"
-		       "?action=getcompany&CIK=0001045810&type="
-		       "&dateb=&owner=exclude&start=0&count=100")
+		url = "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + self._ticker + "&owner=exclude&action=getcompany&Find=Search"
 		
 		while(url != ""):
 			
 			# Ensure compliance with SEC access guidelines	
 			if (self.request_count == 10):
 				self.request_count = 0
+				print("Sleeping...")
 				time.sleep(1)	
 			
 			# Turn current SEC page into html soup
@@ -124,6 +123,7 @@ class Form10K_Data_Extractor:
 	def test(self):
 		self.__compile_f10k_links()
 		print(self.f10k_links)
+		print(self.request_count)
 
 	
 	def __EDGAR_retrieve(self):
@@ -193,5 +193,5 @@ class Form10K_Data_Extractor:
 		print(self.net_incomes)
 
 		
-F = Form10K_Data_Extractor("NVDA")
+F = Form10K_Data_Extractor("JNJ")
 F.test()
