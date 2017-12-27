@@ -160,7 +160,7 @@ class Form10K_Data_Extractor:
 		self.__compile_f10k_links_p1()
 		self.__compile_f10k_links_p2()
 
-		ni_txt_regex = re.compile(r"Net income \(loss\)\.*\s*(\$\s*\(*\d+,\d+\)*\s*)+")
+		ni_txt_regex = re.compile(r"\s*Net (income|loss)+\s*(\(loss\))*\.*\s*(\$\s*\(*\d+,\d+\)*\s*)+")
 
 		for link in self.f10k_file_links:
 			
@@ -172,12 +172,17 @@ class Form10K_Data_Extractor:
 			f10k_file = requests.get(link)
 			self.request_count += 1
 
+		#	with open("test.txt") as txt:
+		#		lines = txt.readlines()
+
+		#	for line in lines:
+		#		if re.match(ni_txt_regex, line):
+		#			print(line)
+
 			if "txt" in link: # If dealing with txt files, use regex only
-				f10k_txt = f10k_file.text	
-				test = f10k_txt.split("\n")
-				for item in test:
+				for item in f10k_file.text.split("\n"):
 					if re.match(ni_txt_regex, item):
-						print(item)
+						print(item)	
 			else: # For html files, use BeautifulSoup and regex
 				print("")
 
@@ -215,7 +220,6 @@ class Form10K_Data_Extractor:
 	
 	def print_net_incomes(self):
 		self.__compile_net_income_data()
-		self.print_f10k_links()
 		print(self.net_incomes)
 
 cmd_ticker = sys.argv[1]		
