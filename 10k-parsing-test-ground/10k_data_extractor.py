@@ -10,7 +10,7 @@ import requests
 import re 
 import pandas as pd
 import time
-from pprint import pprint
+import sys
 
 
 """**************************************************
@@ -36,6 +36,11 @@ class Form10K_Data_Extractor:
 		self.net_incomes = []
 		self.f10k_links = []
 		self.f10k_file_links = []
+
+	def print_f10k_links(self):
+
+		for link in self.f10k_file_links:
+			print(link)
 
 	
 	###################################
@@ -72,7 +77,8 @@ class Form10K_Data_Extractor:
 
 		url_base = "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK="
 		url = url_base + self._ticker + "&type=&dateb=&owner=exclude&count=100"	
-
+			
+		# While there is still another page of SEC filings to be checked ...
 		while(url != ""):
 			
 			# Ensure compliance with SEC access guidelines	
@@ -115,59 +121,66 @@ class Form10K_Data_Extractor:
 		
 		print("Phase two in progress...")	
 		
+		# Visit links compiled in phase one; then get link to
+		# actual form 10-K document	
 		for link in self.f10k_links:
 			
-
+			# Ensure compliance with SEC access guidelines
 			if (self.request_count >= 10):
 				self.request_count = 0
 				print("Sleeping to comply with SEC request guidelines...")
 				time.sleep(1)
-
+			
+			# Turn current page into HTML soup	
 			file_list_page = requests.get(link).content	
 			soup = BeautifulSoup(file_list_page, "lxml")
+			
+			# Increment number of SEC requests performed by 1
 			self.request_count += 1
-
+				
+			# Search for the 10-K form in html format
 			doc_table = soup.find("table", summary = "Document Format Files")
 			rows = doc_table.find_all("tr")
 			link_end = rows[1].find('a')['href']
+			
+			# If html-formatted 10-K form doesn't exist,
+			# find the txt-formatted 10-K form (mostly for very old filings)
 			if "." not in link_end:
 				link_end = rows[-1].find('a')['href']
-
+			
+			# Add link to 10-K form to list for later usage
 			link = self.link_base + link_end
-			print(link)
-	
-	def test(self):
-		self.__compile_f10k_links_p1()
-		self.__compile_f10k_links_p2()
-		print(self.f10k_file_links)
-
-	
-	def __EDGAR_retrieve(self):
-
-		'''Retrieves all 10-K forms from the SEC's EDGAR database'''
+			self.f10k_file_links.append(link)
 		
-		self.__compile_f10k_links_p1()	
-		self.__compile_f10k_links_p2()
-#		
-#		for link in self.f10k_txt_links:	
-#
-#			soup = BeautifulSoup(requests.get(link).content, "html5lib")
-#			self.forms.append(soup)
-#		soup = BeautifulSoup(webfile, "html5lib")
-#		
-#		tds = soup.findAll("td")
-#
-#		for td in tds:
-#			print(td)
-
-#		self.forms.append(soup)
-
+		print("Phase two complete.")
+	
 
 	def __compile_net_income_data(self):
-		# Assume that the 10K forms were retrieved in reverse chronological order
 
-		self.__EDGAR_retrieve()
-		
+		self.__compile_f10k_links_p1()
+		self.__compile_f10k_links_p2()
+
+		ni_txt_regex = re.compile(r"Net income \(loss\)\.*\s*(\$\s*\(*\d+,\d+\)*\s*)+")
+
+		for link in self.f10k_file_links:
+			
+			# Ensure compliance with SEC access guidelines			
+			if (self.request_count >= 10):
+				self.request_count = 0
+				time.sleep(1)
+
+			f10k_file = requests.get(link)
+			self.request_count += 1
+
+			if "txt" in link: # If dealing with txt files, use regex only
+				f10k_txt = f10k_file.text	
+				test = f10k_txt.split("\n")
+				for item in test:
+					if re.match(ni_txt_regex, item):
+						print(item)
+			else: # For html files, use BeautifulSoup and regex
+				print("")
+
 #		# Regular expression for finding line with net income data on it
 #		ni_regex = re.compile(r"(Net income((\$(\d+,*)+)(\s|\xa0)*)+\n)")
 #		
@@ -202,8 +215,9 @@ class Form10K_Data_Extractor:
 	
 	def print_net_incomes(self):
 		self.__compile_net_income_data()
+		self.print_f10k_links()
 		print(self.net_incomes)
 
-		
-F = Form10K_Data_Extractor("AAPL")
-F.test()
+cmd_ticker = sys.argv[1]		
+F = Form10K_Data_Extractor(cmd_ticker)
+F.print_net_incomes()
