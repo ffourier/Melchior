@@ -160,7 +160,11 @@ class Form10K_Data_Extractor:
 		self.__compile_f10k_links_p1()
 		self.__compile_f10k_links_p2()
 
-		ni_txt_regex = re.compile(r"\s*Net (income|loss)+\s*(\(loss\))*\.*\s*(\$\s*\(*\d+,\d+\)*\s*)+")
+		raw_year_extractions = []
+		raw_income_data_extractions = []
+		
+		years_txt_regex = re.compile(r"\s*(((19|20)\d{2})\s+){2,}")
+		ni_txt_regex = re.compile(r"\s*Net (income|loss)+\s*(\(loss\))*\.*\s*(\${0,1}\s*\(*\d+,\d+\)*\s*)+")
 
 		for link in self.f10k_file_links:
 			
@@ -171,53 +175,24 @@ class Form10K_Data_Extractor:
 
 			f10k_file = requests.get(link)
 			self.request_count += 1
-
-		#	with open("test.txt") as txt:
-		#		lines = txt.readlines()
-
-		#	for line in lines:
-		#		if re.match(ni_txt_regex, line):
-		#			print(line)
-
+			
+			years_captured = False
+			incomes_captured = False
+			
 			if "txt" in link: # If dealing with txt files, use regex only
 				for item in f10k_file.text.split("\n"):
-					if re.match(ni_txt_regex, item):
+					if (years_captured and incomes_captured):
+						break
+					if not years_captured and re.match(years_txt_regex, item):
+						print(item)
+						years_captured = True
+					if not incomes_captured and re.match(ni_txt_regex, item):
 						print(item)	
+						incomes_captured = True
 			else: # For html files, use BeautifulSoup and regex
 				print("")
 
-#		# Regular expression for finding line with net income data on it
-#		ni_regex = re.compile(r"(Net income((\$(\d+,*)+)(\s|\xa0)*)+\n)")
-#		
-#		# Iterate over all available 10-K forms and extract historical
-#		# net income data
-#		for f in self.forms:
-#			
-#			# Convert set of table rows from HTML to
-#			# a long string
-#			trs = f.findAll("tr")
-#			trs_text = ""
-#			for tr in trs:
-#				trs_text += tr.text + "\n"
-#
-#			## Find net income data in current 10-K form (via regex)
-#			matches = ni_regex.findall(trs_text)
-#			
-#			## Create (clean) list of historical net income values
-#			## given in current 10-K form
-#			ni_line = matches[0][0].replace("\xa0", " ") ## DATA CLEANING: replace &nbsp with regular space
-#			ni_line = ni_line.replace("\n", "") ## DATA CLEANING: remove "\n"s from data
-#			ni_data = ni_line.split("$") ## DATA CLEANING: create list of net incomes with no $ sign
-#			ni_data.pop(0) ## DATA CLEANING: remove the word "Net income" from list
-#			
-#			for i, e in enumerate(ni_data): ## DATA CLEANING: remove commas and whitespace from net income values
-#				if "," in e:
-#					e = e.replace(",", "")
-#				ni_data[i] = e.strip()	
-#
-#			for ni in ni_data:
-#				self.net_incomes.append(ni)	
-	
+
 	def print_net_incomes(self):
 		self.__compile_net_income_data()
 		print(self.net_incomes)
