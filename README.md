@@ -1,1 +1,1 @@
-Automated Trading System
+Automated trading sytem in Python.
