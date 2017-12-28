@@ -1,5 +1,10 @@
 #!/usr/local/bin/python3.6
 
+##TODO:  1.  Deal with Form 10-K amendments
+##	 2.  Determine whether dollar amounts are in millions or thousands or something else
+##       3.  Improve regex (make more general?)
+##	 4.  Parse the 10-K forms in HTML format
+
 """**************************************************
 *                                                   *
 *                       IMPORTS                     *
@@ -70,8 +75,8 @@ class Form10K_Data_Extractor:
 					{"year" : list(e[0] for e in self.raw_data),
 				 	 "net_income" : list(e[1] for e in self.raw_data)}
 				    )	
-
-		return ni_df
+		
+		return ni_df.sort_values('year')
 		
 
 	###################################
