@@ -105,71 +105,96 @@ def plot_lin_reg(x, y, ax, n_pred, x_for_pred):
 	# Return list of predictions
 	return list(y_intercept + slope * d for d in x_for_pred)
 
-'''DATA'''
-## Get path to csv file containing net income data and read file into dataframe
-csv_file = sys.argv[2]
-ni_df = pd.read_csv(csv_file).sort_values('year')
 
-years = list(ni_df["year"])
-net_incomes = list(ni_df["net_income"])
+def NI_bar_plot(ticker, ni_df, w_regline, n_predyrs):
+	
+	
+	'''Plots net income history (as a bar plot) for the company associated with the supplied ticker symbol.
+	   A regression line can also be plotted (if w_regline is True) with n_predyrs years of predictions.'''
+	
+
+	years = list(ni_df["year"])
+	net_incomes = list(ni_df["net_income"])
 
 
-'''DATA VISUALIZATION'''
-## Create a figure and set of axes for plotting data
-FIG_WIDTH = 12
-FIG_HEIGHT = 6
-fig, ax = plt.subplots(figsize = (FIG_WIDTH, FIG_HEIGHT))
+	'''DATA VISUALIZATION'''
+	## Create a figure and set of axes for plotting data
+	FIG_WIDTH = 12
+	FIG_HEIGHT = 6
+	fig, ax = plt.subplots(figsize = (FIG_WIDTH, FIG_HEIGHT))
 
-## Create bar plot of net income data
-bars = ax.bar(years, net_incomes, color = 'green')
+	## Create bar plot of net income data
+	bars = ax.bar(years, net_incomes, color = 'green')
 
-## Create bar plot for the predicted net incomes
-extended_years = range(max(years) + 1, max(years) + 11)
-pred_net_incomes = plot_lin_reg(years, net_incomes, ax, 10, extended_years)
-extended_bars = ax.bar(extended_years, pred_net_incomes, color = 'gray') 
+	## Create bar plot for the predicted net incomes
+	if (w_regline == True):
+		extended_years = range(max(years) + 1, max(years) + n_predyrs + 1)
+		pred_net_incomes = plot_lin_reg(years, net_incomes, ax, n_predyrs, extended_years)
+		extended_bars = ax.bar(extended_years, pred_net_incomes, color = 'gray') 
 
-## Add net income amounts above bars in bar graph
-for bar, ni in zip(bars + extended_bars, net_incomes + pred_net_incomes):
-	bh = bar.get_height()
-	if (bh < 0):
-		bar.set_color('salmon') # Make bars corresponding to negative net incomes red
-		text_height = bh - 80
+		## Add net income amounts above bars in bar graph
+		for bar, ni in zip(bars + extended_bars, net_incomes + pred_net_incomes):
+			bh = bar.get_height()
+			if (bh < 0):
+				bar.set_color('salmon') # Make bars corresponding to negative net incomes red
+				text_height = bh - 80
+			else:
+				text_height = bh + 40
+
+			ax.text(bar.get_x() + bar.get_width() / 2, text_height, '%d' % ni, ha = 'center', va = 'bottom',
+				fontweight = 'bold', color = 'black', fontsize = 6)
 	else:
-		text_height = bh + 40
+		for bar, ni in zip(bars, net_incomes):
+			bh = bar.get_height()
+			if (bh < 0):
+				bar.set_color('salmon')
+				text_height = bh - 80
+			else:
+				text_height = bh + 40
+			
+			ax.text(bar.get_x() + bar.get_width() / 2, text_height, '%d' % ni, ha = 'center', va = 'bottom',
+				fontweight = 'bold', color = 'black', fontsize = 6)	
+					
 
-	ax.text(bar.get_x() + bar.get_width() / 2, text_height, '%d' % ni, ha = 'center', va = 'bottom',
-		fontweight = 'bold', color = 'black', fontsize = 6)
+	## Add text to describe predicted net income growth
+	if (w_regline == True):
+		ax.text(extended_bars[0].get_x() + extended_bars[0].get_width() / 2, -150,
+		'%.2f %% growth' % (100 * ((extended_bars[1].get_height() - extended_bars[0].get_height()) / extended_bars[0].get_height())),
+		fontweight = 'bold', fontsize = 14)
 
-## Add text to describe predicted net income growth
-ax.text(extended_bars[0].get_x() + extended_bars[0].get_width() / 2, -150,
-	'%.2f %% growth' % (100 * ((extended_bars[1].get_height() - extended_bars[0].get_height()) / extended_bars[0].get_height())),
-	fontweight = 'bold', fontsize = 14)
+	## Create legend for plot
+	loss_rect = patches.Rectangle((0, 0), 1, 1, fc = 'salmon') # red rectangle
+	gain_rect = patches.Rectangle((0, 0), 1, 1, fc = 'green') # green rectangle
+	pred_rect = patches.Rectangle((0, 0), 1, 1, fc = 'gray') # gray rectangle
 
-## Create legend for plot
-loss_rect = patches.Rectangle((0, 0), 1, 1, fc = 'salmon') # red rectangle
-gain_rect = patches.Rectangle((0, 0), 1, 1, fc = 'green') # green rectangle
-pred_rect = patches.Rectangle((0, 0), 1, 1, fc = 'gray') # gray rectangle
-plt.legend([loss_rect, gain_rect, pred_rect], ["Net loss", "Net gain", "Predicted"])
+	if (w_regline == True):
+		plt.legend([loss_rect, gain_rect, pred_rect], ["Net loss", "Net gain", "Predicted"])
+	else:
+		plt.legend([loss_rect, gain_rect], ["Net loss", "Net gain"])
 
-## Add labels and title to plot
-title = sys.argv[1] + " Annual Net Income " + "(%d - " % min(years) + "%d)" % max(years) 
-ax.set_title(title)
-ax.set_xlabel('Year')
-ax.set_ylabel('Net Income (in millions)')
+	## Add labels and title to plot
+	title = ticker + " Annual Net Income " + "(%d - " % min(years) + "%d)" % max(years) 
+	ax.set_title(title)
+	ax.set_xlabel('Year')
+	ax.set_ylabel('Net Income (in millions)')
 
-## Set the background color for the plot
-ax.set_facecolor('wheat')
+	## Set the background color for the plot
+	ax.set_facecolor('wheat')
 
-## Adjust y range of plot
-#ax.set_ylim(min(net_incomes + pred_net_incomes) - 200, max(net_incomes + pred_net_incomes) + 200)
-ax.margins(0.10)
+	## Adjust y range of plot
+	#ax.set_ylim(min(net_incomes + pred_net_incomes) - 200, max(net_incomes + pred_net_incomes) + 200)
+	ax.margins(0.10)
 
-## Make x-axis visible on plot
-ax.axhline(0, color = 'black')
+	## Make x-axis visible on plot
+	ax.axhline(0, color = 'black')
 
-## Angle years on x-axis, and only include every other year
-plt.xticks(np.arange(min(years), max(extended_years) + 1, 2.0))
-fig.autofmt_xdate()
+	## Angle years on x-axis, and only include every other year
+	if (w_regline == True):
+		plt.xticks(np.arange(min(years), max(extended_years) + 1, 2.0))
+	else:
+		plt.xticks(np.arange(min(years), max(years) + 1, 2.0))
 
-## Display the plot
-plt.show()
+	fig.autofmt_xdate()
+
+	## Display the plot
+	plt.show()

@@ -10,7 +10,6 @@ import requests
 import re 
 import pandas as pd
 import time
-import sys
 
 
 """**************************************************
@@ -36,6 +35,7 @@ class Form10K_Data_Extractor:
 		self.net_incomes = []
 		self.f10k_links = []
 		self.f10k_file_links = []
+		self.raw_data = set()
 	
 	###################################
 	## Public methods
@@ -50,6 +50,7 @@ class Form10K_Data_Extractor:
 		for link in self.f10k_file_links:
 			print(link)
 
+
 	def print_net_incomes(self):
 
 		
@@ -59,6 +60,19 @@ class Form10K_Data_Extractor:
 		self.__compile_net_income_data()
 		print(self.net_incomes)
 
+	
+	def get_net_income_df(self):
+		
+	
+		'''Returns a dataframe containing the year and net income data'''	
+
+		ni_df = pd.DataFrame(
+					{"year" : list(e[0] for e in self.raw_data),
+				 	 "net_income" : list(e[1] for e in self.raw_data)}
+				    )	
+
+		return ni_df
+		
 
 	###################################
 	## Private methods
@@ -177,8 +191,6 @@ class Form10K_Data_Extractor:
 		self.__compile_f10k_links_p1()
 		self.__compile_f10k_links_p2()
 
-		data_set = set()		
-	
 		years_txt_regex = re.compile(r"\s*(((19|20)\d{2})\s+){2,}")
 		ni_txt_regex = re.compile(r"\s*Net (income|loss)+\s*(\(loss\))*\.*\s*(\${0,1}\s*\(*\d+,\d+\)*\s*)+")
 
@@ -201,7 +213,7 @@ class Form10K_Data_Extractor:
 
 					if (years_captured and incomes_captured):
 						for yr, ni in zip(years, net_incomes):
-							data_set.add((yr, ni))
+							self.raw_data.add((yr, ni))
 						break
 
 					if not years_captured and re.match(years_txt_regex, item):
@@ -220,6 +232,4 @@ class Form10K_Data_Extractor:
 
 			else: # For html files, use BeautifulSoup and regex
 				i = 1	
-			
-		print(data_set)
 
