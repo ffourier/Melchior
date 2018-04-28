@@ -3,7 +3,7 @@
 ## PURPOSE: Search for stocks that have lost   #
 ##          significant value over a specified #
 ##          period of time.	               #
-## AUTHOR: ngagnon			       #
+## AUTHOR: nolanHg                             #
 ## DATE: 04/27/2018			       #
 ################################################
 
@@ -21,12 +21,10 @@ import datetime
 def page_to_soup(url):
 	return BeautifulSoup(requests.get(url).content, "html5lib")
 
-
 def soup_to_json(soup):
 	script = soup.find("script",text=re.compile("root.App.main")).text
 	data = loads(re.search("root.App.main\s+=\s+(\{.*\})", script).group(1))
 	return data
-
 
 def get_nasdaq_tickers():
 	tickers = []
@@ -43,8 +41,7 @@ def get_nasdaq_tickers():
 		
 	return tickers
 
-
-def display_LG(tlist, date):
+def display_LG(tlist, date, pct_thresh, mode):
 	for ticker in tlist:
 		quote_src_page = "https://finance.yahoo.com/quote/" + ticker + "?p=" + ticker
 		soup = page_to_soup(quote_src_page)
@@ -60,28 +57,31 @@ def display_LG(tlist, date):
 					print("Price on " + date + ": No data available")
 					print("Current price: " + str(quote))
 					print("\n")
-				else:		
-					if (hist_quote > quote):
-						pct_loss = -100 * ((1.0 * abs(quote - hist_quote)) / hist_quote)
-						print(ticker + ":")
-						print("Price on " + date + ": " + str(hist_quote))
-						print("Current price: " + str(quote))
-						print("Percentage loss: " + colored("%.2f" % pct_loss, 'red', attrs = ['bold']))
-						print("\n")
+				else:	
+					if (mode == "loss"):	
+						if (hist_quote > quote):
+							pct_loss = -100 * ((1.0 * abs(quote - hist_quote)) / hist_quote)
+							if abs(pct_loss) > threshold:
+								print(ticker + ":")
+								print("Price on " + date + ": " + str(hist_quote))
+								print("Current price: " + str(quote))
+								print("Percentage loss: " + colored("%.2f" % pct_loss, 'red', attrs = ['bold']))
+								print("\n")
 					else:
-						pct_gain = 100 * ((1.0 * abs(quote - hist_quote)) / hist_quote)
-						print(ticker + ":")
-						print("Price on " + date + ": " + str(hist_quote))
-						print("Current price: " + str(quote))
-						print("Percentage gain: " + colored("%.2f" % pct_gain, 'green', attrs = ['bold']))
-						print("\n")
+						if (hist_quote < quote):
+							pct_gain = 100 * ((1.0 * abs(quote - hist_quote)) / hist_quote)
+							if abs(pct_gain) > threshold:
+								print(ticker + ":")
+								print("Price on " + date + ": " + str(hist_quote))
+								print("Current price: " + str(quote))
+								print("Percentage gain: " + colored("%.2f" % pct_gain, 'green', attrs = ['bold']))
+								print("\n")
 
 			except KeyError:
 				print("Key Error: " + ticker)
 
 		except AttributeError:
 			print("Download Error: " + ticker)	
-
 
 def get_historical_quote(ticker, date):
 	date_list = date.split("/")
@@ -106,10 +106,12 @@ def get_historical_quote(ticker, date):
 	
 	return hist_quote 
 
-if (len(sys.argv) != 2):
-	print("ERROR:  Supply a date")
+if (len(sys.argv) != 4):
+	print("USAGE: python3 sigloss_search <date> <pct threshold> <mode>")
 	exit()
 
 historical_date = sys.argv[1]	
+threshold = float(sys.argv[2])
+mode = sys.argv[3]
 tickers = get_nasdaq_tickers()
-display_LG(tickers, historical_date)
+display_LG(tickers, historical_date, threshold, mode)
